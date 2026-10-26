@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MechanMotors в Мясново</title>
+<meta name="description" content="Автосервис MechanMotors в Туле, Мясново, ГСК № 12. Ремонт и замена двигателей, ходовая, электрика, шиномонтаж, пескоструй.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&family=Rubik:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap">
+<style>
+/* Garage-cooperative box: concrete grey, hazard-stripe yellow, heavy sporty display type. Box number as a recurring device. */
+:root{--display:"Russo One","Arial Black",sans-serif;--body:"Rubik","Segoe UI",Roboto,sans-serif;--mono:"Roboto Mono",ui-monospace,Menlo,monospace;--dw:400;--dls:0;--dtt:uppercase;--r:3px;--h1:clamp(2.3rem,5.6vw,4.4rem);--h2:clamp(1.9rem,4vw,3rem);--bg:#E8E8E4;--panel:#F4F4F1;--ink:#151515;--muted:#5C5C57;--rule:#C9C9C2;--acc:#F2C200;--acc-text:#151515;--on-acc:#151515;--band:#151515;--on-band:#F4F4F1;--head-bg:#151515;--head-ink:#F4F4F1}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121212;--panel:#1B1B1A;--ink:#EDEDE8;--muted:#A2A29A;--rule:#30302C;--acc:#F2C200;--acc-text:#F2C200;--on-acc:#151515;--band:#0A0A0A;--on-band:#EDEDE8;--head-bg:#0A0A0A;--head-ink:#EDEDE8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121212;--panel:#1B1B1A;--ink:#EDEDE8;--muted:#A2A29A;--rule:#30302C;--acc:#F2C200;--acc-text:#F2C200;--on-acc:#151515;--band:#0A0A0A;--on-band:#EDEDE8;--head-bg:#0A0A0A;--head-ink:#EDEDE8;color-scheme:dark}
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.62 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head-bg)}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.04;letter-spacing:var(--dls);margin:0;text-wrap:balance;text-transform:var(--dtt)}
+.k{font:500 .76rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--head-bg);color:var(--head-ink);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:var(--dw) 1.25rem/1 var(--display);text-transform:var(--dtt);letter-spacing:var(--dls)}
+.logo small{display:block;font:400 .72rem var(--mono);opacity:.7;margin-top:3px}
+.logo .m{flex:none}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:.92rem;font-weight:500;opacity:.72}
+.top nav a:hover{opacity:1}
+.tel{font:500 .95rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--on-acc);font:600 .97rem/1 var(--body);padding:14px 20px;border-radius:var(--r);text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}.top .tel{font-size:.82rem}}
+.hero{padding-block:clamp(36px,6vw,80px);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:var(--h1);margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--acc-text)}
+.hero .lede{font-size:1.14rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{font:400 .8rem var(--mono);border:1px solid var(--rule);background:var(--panel);padding:5px 10px;border-radius:999px}
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px 48px;align-items:end;margin-bottom:34px}
+@media (max-width:800px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:var(--h2)}
+.sh p{margin:0;color:var(--muted);max-width:56ch}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;border-top:2px solid var(--ink)}
+@media (max-width:900px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.groups{grid-template-columns:1fr}}
+.groups div{padding:20px 0 22px;border-bottom:1px solid var(--rule)}
+.groups h3{font-size:1.3rem;margin-bottom:8px}
+.groups ul{list-style:none;margin:0;padding:0;color:var(--muted);font-size:.97rem}
+.groups li{padding:2px 0}
+.price{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 48px;align-items:start}
+@media (max-width:800px){.price{grid-template-columns:1fr}}
+.price h3{font-size:1.6rem}
+.price .pl{border-top:2px solid var(--ink)}
+.pi{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.pi span{min-width:0}
+.pi i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px);min-width:12px}
+.pi b{font:500 .98rem var(--mono);white-space:nowrap}
+.pnote{font:400 .8rem var(--mono);color:var(--muted);margin:10px 0 0}
+.band{background:var(--band);color:var(--on-band)}
+.band .k{color:color-mix(in srgb,var(--on-band) 62%,transparent)}
+.band .sh p{color:color-mix(in srgb,var(--on-band) 72%,transparent)}
+.ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.ppl div{border-top:3px solid var(--acc);padding-top:14px}
+.ppl b{display:block;font:var(--dw) 1.5rem/1.1 var(--display);text-transform:var(--dtt)}
+.ppl span{display:block;font:400 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin:6px 0 10px}
+.ppl p{margin:0;opacity:.85;font-size:.97rem}
+.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rv{grid-template-columns:1fr}}
+.rv figure{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px}
+.rv blockquote{margin:0;font-size:1.03rem}
+.rv figcaption{margin-top:auto;font:400 .78rem var(--mono);color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font:var(--dw) 3rem/1 var(--display);color:var(--acc-text)}
+.score span{font:400 .8rem var(--mono);color:var(--muted)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--acc)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--bg);padding:8px 13px;border-radius:999px;font:500 .92rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.pick input:focus-visible+label{outline:3px solid var(--acc);outline-offset:2px}
+.facts{border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .7rem var(--mono);padding:3px 7px;border-radius:4px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .78rem var(--mono);color:var(--muted)}
+
+.box{background:var(--panel);border:2px solid var(--ink);position:relative}
+.box .stripe{height:18px;background:repeating-linear-gradient(-45deg,#F2C200 0 14px,#151515 14px 28px)}
+.box .bi{padding:22px 22px 18px;display:grid;gap:0}
+.box .bn{font:400 5.4rem/1 var(--display);margin:4px 0 14px}
+.box .row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-top:1px solid var(--rule)}
+.box .row b{font:500 1.1rem var(--mono)}
+.find{padding-top:0}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;counter-reset:s}
+@media (max-width:800px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;background:var(--panel);border:1px solid var(--rule);padding:22px;position:relative}
+.steps li::before{content:counter(s);position:absolute;top:-14px;left:18px;background:var(--acc);color:#151515;font:400 1.1rem/1 var(--display);padding:6px 10px}
+.steps b{display:block;font:400 1.15rem/1.2 var(--display);text-transform:uppercase;margin:8px 0 6px}
+.steps span{color:var(--muted)}
+.btn.out{box-shadow:inset 0 0 0 2px var(--ink)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="m" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" fill="#F2C200"/><path d="M0 34 34 0M-8 26 26-8M8 42 42 8" stroke="#151515" stroke-width="5"/></svg><span><b>MechanMotors</b><small>автосервис · Мясново, ГСК № 12</small></span></a>
+    <nav aria-label="Разделы"><a href="#services">Услуги</a><a href="#people">Мастера</a><a href="#reviews">Отзывы</a><a href="#contact">Запись</a></nav>
+    <a class="tel num" href="tel:+79509298097">+7 950 929-80-97</a>
+    <a class="btn" href="#contact">Записаться</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · мкр. Мясново · ГСК № 12, 7‑й Полюсный, 67А</p>
+        <h1>Меняем двигатели. <em>И всё остальное тоже.</em></h1>
+        <p class="lede">Ремонт и замена двигателей, ходовая, тормоза, КПП, электрика и диагностика. Шиномонтаж, пескоструйная обработка, поможем завести машину. Подберём и привезём запчасти.</p>
+        <div class="cta"><a class="btn" href="#contact">Записаться в WhatsApp</a><a class="btn out num" href="tel:+79509298097">+7 950 929-80-97</a></div>
+        <div class="chips"><span>Гарантия</span><span>Пескоструй</span><span>Помощь в запуске авто</span><span>Шиномонтаж и балансировка</span></div>
+      </div>
+      <aside class="box"><div class="stripe" aria-hidden="true"></div><div class="bi">
+  <span class="k">Бокс</span><b class="bn">67А</b>
+  <div class="row"><span class="k">Рейтинг</span><b class="num">4,7</b></div>
+  <div class="row"><span class="k">Оценок</span><b class="num">249</b></div>
+  <div class="row"><span class="k">Отзывов</span><b class="num">106</b></div>
+  <div class="row"><span class="k">Сегодня</span><b>до 19:00</b></div></div></aside>
+    </div>
+  </section>
+  <section class="find"><div class="wrap"><div class="sh"><h2>Как найти бокс</h2><p>Мы в гаражном кооперативе, поэтому навигатор доводит только до ворот. Дальше так:</p></div>
+  <ol class="steps"><li><b>ГСК № 12, Мясново</b><span>Вбейте в навигатор «MechanMotors» или адрес: 7‑й Полюсный, 67А.</span></li>
+  <li><b>Заезжайте на территорию</b><span>Ищите бокс 67А, рядом жёлто‑чёрная табличка.</span></li>
+  <li><b>Не нашли?</b><span>Позвоните или напишите в WhatsApp, выйдем и встретим.</span></li></ol></div></section>
+  <section id="services">
+    <div class="wrap">
+      <div class="sh"><h2>Что делаем</h2><p>Отечественные автомобили и иномарки: китайские, корейские, японские, европейские.</p></div>
+      <div class="groups"><div><h3>Двигатель</h3><ul><li>Ремонт и замена двигателя</li><li>Ремонт ГБЦ</li><li>Замена ремня ГРМ</li><li>Ремонт и чистка форсунок</li></ul></div><div><h3>Ходовая и руль</h3><ul><li>Ремонт ходовой</li><li>Тормозная система</li><li>Ремонт рулевых реек</li></ul></div><div><h3>Трансмиссия</h3><ul><li>Ремонт КПП</li><li>Ремонт сцепления</li></ul></div><div><h3>Электрика</h3><ul><li>Автоэлектрик</li><li>Генератор и стартер</li><li>Компьютерная диагностика</li><li>Установка парктроников</li></ul></div><div><h3>Колёса и кузов</h3><ul><li>Шиномонтаж и балансировка</li><li>Пескоструйная обработка</li><li>Ремонт выхлопной системы</li></ul></div><div><h3>Обслуживание</h3><ul><li>Замена масла</li><li>Комплексное ТО</li><li>Подбор и заказ запчастей</li></ul></div></div>
+      <div class="price"><div><h3>Цены</h3><p class="pnote">Цены из карточки сервиса на Яндекс Картах. Остальное называем после осмотра, до начала работ.</p></div><div class="pl num"><div class="pi"><span>Замена масла в двигателе</span><i></i><b>1 000 ₽</b></div><div class="pi"><span>Подбор автозапчастей</span><i></i><b>100 ₽</b></div><div class="pi"><span>Шиномонтаж, комплект</span><i></i><b>от 2 000 ₽</b></div></div></div>
+    </div>
+  </section>
+  <section id="people" class="band">
+    <div class="wrap">
+      <div class="sh"><h2>Мастера</h2><p>Клиенты в отзывах называют мастеров по именам.</p></div>
+      <div class="ppl"><div><b>Никита</b><span>мастер</span><p>«Всегда быстро входит в положение автовладельца, делает максимально быстро, чётко».</p></div><div><b>Бригада</b><span>механики</span><p>«Парни знают своё дело».</p></div><div><b>Подбор</b><span>запчасти</span><p>Подберём детали под ваш автомобиль и привезём к ремонту.</p></div></div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sh"><h2>Отзывы</h2><div class="score"><b class="num">4,7</b><span>249 оценок · 106 отзывов<br>Яндекс Карты</span></div></div>
+      <div class="rv"><figure><blockquote>«Очень хороший автосервис, Никита с ребятами большие молодцы, договорились о замене двигателя»</blockquote><figcaption>Юрий С. · сентябрь 2025</figcaption></figure><figure><blockquote>«Никита всегда быстро входит в положение автовладельца, делает максимально быстро, чётко»</blockquote><figcaption>Светлана Будько · январь 2025</figcaption></figure><figure><blockquote>«Менял задние колодки, Шевроле Авео Т300. Всё нормально, парни знают своё дело»</blockquote><figcaption>Сергей · февраль 2025</figcaption></figure></div>
+      <p style="margin-top:22px"><a class="k" href="https://yandex.ru/maps/org/mechanmotors/114898305318/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах ↗</a></p>
+    </div>
+  </section>
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Запись</p>
+        <h2>Записаться в WhatsApp</h2>
+        <p>Заполните форму, и откроется WhatsApp с готовым сообщением мастеру.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="c">Автомобиль</label><input id="c" placeholder="Например, Chevrolet Aveo 2014"></div>
+        </div>
+        <fieldset class="f"><legend>Что нужно</legend><div class="pick"><input type="radio" name="w" id="x0" value="двигатель" checked><label for="x0">Двигатель</label><input type="radio" name="w" id="x1" value="ходовая"><label for="x1">Ходовая</label><input type="radio" name="w" id="x2" value="электрика"><label for="x2">Электрика</label><input type="radio" name="w" id="x3" value="замена масла"><label for="x3">ТО и масло</label><input type="radio" name="w" id="x4" value="шиномонтаж"><label for="x4">Шиномонтаж</label><input type="radio" name="w" id="x5" value="пескоструйная обработка"><label for="x5">Пескоструй</label></div></fieldset>
+        <div class="f"><label for="t">Что случилось</label><textarea id="t" placeholder="Коротко опишите проблему"></textarea></div>
+        <div class="cta"><a class="btn" id="wa" data-n="79509298097" href="https://wa.me/79509298097" target="_blank" rel="noopener">Открыть WhatsApp</a></div>
+      </form>
+      <div>
+        <p class="k">Контакты</p>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin:10px 0 22px">Мясново, ГСК № 12, бокс 67А</h2>
+        <div class="facts num">
+          <div><span>Телефон</span><span><span id="tel">+7 950 929-80-97</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Адрес</span><span>Тула, мкр. Мясново, ГСК № 12,<br>7‑й Полюсный, 67А</span></div><div><span>Режим</span><span>до 19:00, по записи</span></div><div><span>Оплата</span><span>наличные, перевод</span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/mechanmotors/114898305318/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© MechanMotors, Тула</span><span>Демо‑версия сайта</span></div></footer>
+<script>
+(function(){
+  var form=document.getElementById("form"),wa=document.getElementById("wa");
+  function upd(){
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    var car=document.getElementById("c").value.trim(),t=document.getElementById("t").value.trim(),n=document.getElementById("n").value.trim();
+    wa.href="https://wa.me/"+wa.dataset.n+"?text="+encodeURIComponent("Здравствуйте! Хочу записаться: "+w+"."+(car?"\nАвтомобиль: "+car+".":"")+(t?"\n"+t:"")+(n?"\n"+n:""));
+  }
+  form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault();});upd();
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>

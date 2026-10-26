@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Гараж САК сервис</title>
+<meta name="description" content="Гараж САК сервис в Туле, 6-й проезд, 1В. Кондиционеры, автономные отопители и Webasto, антикор, шумоизоляция, электрика, ремонт рефрижераторов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@600;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Climate shop: frost blue and heater amber as a cold/warm pair on warm white, technical display face. Thermometer scale as the signature. */
+:root{--display:"Tektur","Arial Narrow",sans-serif;--body:"Golos Text","Segoe UI",Roboto,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--dw:800;--dls:-.01em;--dtt:none;--r:6px;--h1:clamp(2.4rem,5.8vw,4.6rem);--h2:clamp(1.9rem,4vw,3rem);--heat:#E07A1F;--bg:#F7F5F1;--panel:#FFFFFF;--ink:#152029;--muted:#5A6670;--rule:#D9DCDD;--acc:#1F6F9F;--acc-text:#1F6F9F;--on-acc:#FFFFFF;--band:#152029;--on-band:#F1F4F6;--head-bg:#F7F5F1;--head-ink:#152029}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#10161B;--panel:#172028;--ink:#E5ECF1;--muted:#93A1AC;--rule:#26323C;--acc:#5AB3E6;--acc-text:#7CC4EE;--on-acc:#04131D;--band:#0B1116;--on-band:#E5ECF1;--head-bg:#10161B;--head-ink:#E5ECF1;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10161B;--panel:#172028;--ink:#E5ECF1;--muted:#93A1AC;--rule:#26323C;--acc:#5AB3E6;--acc-text:#7CC4EE;--on-acc:#04131D;--band:#0B1116;--on-band:#E5ECF1;--head-bg:#10161B;--head-ink:#E5ECF1;color-scheme:dark}
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.62 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head-bg)}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.04;letter-spacing:var(--dls);margin:0;text-wrap:balance;text-transform:var(--dtt)}
+.k{font:500 .76rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--head-bg);color:var(--head-ink);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:var(--dw) 1.25rem/1 var(--display);text-transform:var(--dtt);letter-spacing:var(--dls)}
+.logo small{display:block;font:400 .72rem var(--mono);opacity:.7;margin-top:3px}
+.logo .m{flex:none}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:.92rem;font-weight:500;opacity:.72}
+.top nav a:hover{opacity:1}
+.tel{font:500 .95rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--on-acc);font:600 .97rem/1 var(--body);padding:14px 20px;border-radius:var(--r);text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}.top .tel{font-size:.82rem}}
+.hero{padding-block:clamp(36px,6vw,80px);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:var(--h1);margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--acc-text)}
+.hero .lede{font-size:1.14rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{font:400 .8rem var(--mono);border:1px solid var(--rule);background:var(--panel);padding:5px 10px;border-radius:999px}
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px 48px;align-items:end;margin-bottom:34px}
+@media (max-width:800px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:var(--h2)}
+.sh p{margin:0;color:var(--muted);max-width:56ch}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;border-top:2px solid var(--ink)}
+@media (max-width:900px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.groups{grid-template-columns:1fr}}
+.groups div{padding:20px 0 22px;border-bottom:1px solid var(--rule)}
+.groups h3{font-size:1.3rem;margin-bottom:8px}
+.groups ul{list-style:none;margin:0;padding:0;color:var(--muted);font-size:.97rem}
+.groups li{padding:2px 0}
+.price{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 48px;align-items:start}
+@media (max-width:800px){.price{grid-template-columns:1fr}}
+.price h3{font-size:1.6rem}
+.price .pl{border-top:2px solid var(--ink)}
+.pi{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.pi span{min-width:0}
+.pi i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px);min-width:12px}
+.pi b{font:500 .98rem var(--mono);white-space:nowrap}
+.pnote{font:400 .8rem var(--mono);color:var(--muted);margin:10px 0 0}
+.band{background:var(--band);color:var(--on-band)}
+.band .k{color:color-mix(in srgb,var(--on-band) 62%,transparent)}
+.band .sh p{color:color-mix(in srgb,var(--on-band) 72%,transparent)}
+.ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.ppl div{border-top:3px solid var(--acc);padding-top:14px}
+.ppl b{display:block;font:var(--dw) 1.5rem/1.1 var(--display);text-transform:var(--dtt)}
+.ppl span{display:block;font:400 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin:6px 0 10px}
+.ppl p{margin:0;opacity:.85;font-size:.97rem}
+.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rv{grid-template-columns:1fr}}
+.rv figure{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px}
+.rv blockquote{margin:0;font-size:1.03rem}
+.rv figcaption{margin-top:auto;font:400 .78rem var(--mono);color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font:var(--dw) 3rem/1 var(--display);color:var(--acc-text)}
+.score span{font:400 .8rem var(--mono);color:var(--muted)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--acc)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--bg);padding:8px 13px;border-radius:999px;font:500 .92rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.pick input:focus-visible+label{outline:3px solid var(--acc);outline-offset:2px}
+.facts{border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .7rem var(--mono);padding:3px 7px;border-radius:4px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .78rem var(--mono);color:var(--muted)}
+
+.warm{color:var(--heat)}
+.thermo{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:22px}
+.thermo .scale{height:16px;border-radius:999px;background:linear-gradient(90deg,var(--acc),#9BB7C6 50%,var(--heat))}
+.thermo .ends{display:flex;justify-content:space-between;gap:16px;margin:16px 0 20px}
+.thermo .ends div:last-child{text-align:right}
+.thermo .ends b{display:block;font:800 2rem/1 var(--display);color:var(--acc-text)}
+.thermo .ends b.w{color:var(--heat)}
+.thermo .foot{display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--rule);padding-top:14px}
+.thermo .foot b{font:800 2.4rem/1 var(--display)}
+.road{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px 28px;align-items:center;background:var(--panel);border:1px solid var(--rule);border-left:4px solid var(--heat);border-radius:8px;padding:20px 22px}
+.road p{margin:0}
+@media (max-width:760px){.road{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="m" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M15 2v26M4 8.5l22 13M4 21.5l22-13" stroke="var(--acc)" stroke-width="2.4" stroke-linecap="round"/><circle cx="15" cy="15" r="4" fill="#E07A1F"/></svg><span><b>Гараж САК</b><small>сервис · 6‑й проезд, 1В</small></span></a>
+    <nav aria-label="Разделы"><a href="#services">Услуги</a><a href="#people">Мастера</a><a href="#reviews">Отзывы</a><a href="#contact">Запись</a></nav>
+    <a class="tel num" href="tel:+74872790767">+7 4872 79-07-67</a>
+    <a class="btn" href="#contact">Записаться</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · 6‑й проезд, 1В · со стороны «Зельгроса»</p>
+        <h1>Чтобы летом <em>холодило</em>, а зимой <span class="warm">грело</span></h1>
+        <p class="lede">Заправка и ремонт кондиционеров, ремонт автономных отопителей и Webasto, радиаторов, рефрижераторов. Антикор, шумоизоляция, автоэлектрика, тормоза, ходовая, двигатель.</p>
+        <div class="cta"><a class="btn" href="#contact">Записаться в WhatsApp</a><a class="btn out num" href="tel:+74872790767">+7 4872 79-07-67</a></div>
+        <div class="chips"><span>Автономки и Webasto</span><span>Рефрижераторы</span><span>Антикор</span><span>Можно с собакой</span></div>
+      </div>
+      <aside class="thermo" aria-label="Шкала: от кондиционера до отопителя"><div class="scale" aria-hidden="true"></div>
+  <div class="ends"><div><b>+4 °C</b><span class="k">на выходе кондиционера</span></div><div><b class="w">+60 °C</b><span class="k">из сопла автономки</span></div></div>
+  <div class="foot"><b class="num">4,7</b><span class="k">85 оценок · 43 отзыва</span></div></aside>
+    </div>
+  </section>
+  <section class="find" style="padding-top:0"><div class="wrap"><div class="road"><span class="k">Как доехать</span><p><b>6‑й проезд, 1В.</b> Подъезжайте со стороны «Зельгроса» и держитесь указателей «Гараж САК». Если сомневаетесь, позвоните, подскажем по телефону.</p><a class="btn out" href="https://youtube.com/@garagSAK" target="_blank" rel="noopener">Наш YouTube ↗</a></div></div></section>
+  <section id="services">
+    <div class="wrap">
+      <div class="sh"><h2>Что делаем</h2><p>Легковые автомобили, коммерческий транспорт и рефрижераторы. Отечественные и иномарки.</p></div>
+      <div class="groups"><div><h3>Климат</h3><ul><li>Заправка кондиционеров</li><li>Поиск утечек, ремонт трубок</li><li>Замена компрессора</li><li>Ремонт радиаторов</li></ul></div><div><h3>Отопители</h3><ul><li>Ремонт автономных отопителей</li><li>Ремонт Webasto</li></ul></div><div><h3>Кузов</h3><ul><li>Антикоррозийная обработка</li><li>Пескоструй</li><li>Шумоизоляция</li><li>Установка фаркопа</li></ul></div><div><h3>Электрика</h3><ul><li>Автоэлектрик, электроника</li><li>Сигнализации</li><li>Компьютерная диагностика</li></ul></div><div><h3>Механика</h3><ul><li>Двигатель</li><li>Ходовая и тормоза</li><li>КПП и сцепление</li><li>Выхлопная система</li></ul></div><div><h3>Коммерческий транспорт</h3><ul><li>Ремонт рефрижераторов</li><li>Замена масла</li></ul></div></div>
+      <div class="price"><div><h3>Цены</h3><p class="pnote">Цены из карточки сервиса на Яндекс Картах. Остальное называем после осмотра, до начала работ.</p></div><div class="pl num"><div class="pi"><span>Заправка автокондиционера, поиск утечек, ремонт трубок и радиаторов</span><i></i><b>3 500 ₽</b></div></div></div>
+    </div>
+  </section>
+  <section id="people" class="band">
+    <div class="wrap">
+      <div class="sh"><h2>Мастера</h2><p>Клиенты в отзывах называют мастеров по именам.</p></div>
+      <div class="ppl"><div><b>Александр</b><span>мастер</span><p>«Благодарю мастера Александра за терпение со мной».</p></div><div><b>Артём</b><span>мастер</span><p>«Мастерам Александру и Артёму огромное спасибо».</p></div></div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sh"><h2>Отзывы</h2><div class="score"><b class="num">4,7</b><span>85 оценок · 43 отзыва<br>Яндекс Карты</span></div></div>
+      <div class="rv"><figure><blockquote>«Кондиционер холодит, ручник держит, тормоза работают. Мастерам Александру и Артёму огромное спасибо»</blockquote><figcaption>Нина · Яндекс Карты</figcaption></figure><figure><blockquote>«Мастер обнаружил сгнивший провод на компрессоре, в течение тридцати минут всё было готово»</blockquote><figcaption>Евгений Лукутин · июль 2024</figcaption></figure><figure><blockquote>«Редко встречаются такие мастера. Всё объяснили по полочкам»</blockquote><figcaption>Яна Мельниченко · Яндекс Карты</figcaption></figure></div>
+      <p style="margin-top:22px"><a class="k" href="https://yandex.ru/maps/org/car_service/226127266901/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах ↗</a></p>
+    </div>
+  </section>
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Запись</p>
+        <h2>Записаться в WhatsApp</h2>
+        <p>Заполните форму, и откроется WhatsApp с готовым сообщением мастеру.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="c">Автомобиль</label><input id="c" placeholder="Например, ГАЗель Next или Toyota RAV4"></div>
+        </div>
+        <fieldset class="f"><legend>Что нужно</legend><div class="pick"><input type="radio" name="w" id="x0" value="кондиционер" checked><label for="x0">Кондиционер</label><input type="radio" name="w" id="x1" value="автономный отопитель"><label for="x1">Автономка / Webasto</label><input type="radio" name="w" id="x2" value="антикор"><label for="x2">Антикор</label><input type="radio" name="w" id="x3" value="шумоизоляция"><label for="x3">Шумоизоляция</label><input type="radio" name="w" id="x4" value="электрика"><label for="x4">Электрика</label><input type="radio" name="w" id="x5" value="ремонт"><label for="x5">Механика</label></div></fieldset>
+        <div class="f"><label for="t">Что случилось</label><textarea id="t" placeholder="Коротко опишите проблему"></textarea></div>
+        <div class="cta"><a class="btn" id="wa" data-n="79307910767" href="https://wa.me/79307910767" target="_blank" rel="noopener">Открыть WhatsApp</a></div>
+      </form>
+      <div>
+        <p class="k">Контакты</p>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin:10px 0 22px">6‑й проезд, 1В</h2>
+        <div class="facts num">
+          <div><span>Телефон</span><span><span id="tel">+7 4872 79-07-67</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Адрес</span><span>Тула, 6‑й проезд, 1В</span></div><div><span>WhatsApp</span><span>+7 930 791-07-67</span></div><div><span>Режим</span><span>по записи</span></div><div><span>YouTube</span><span><a href="https://youtube.com/@garagSAK" target="_blank" rel="noopener">@garagSAK ↗</a></span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/car_service/226127266901/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© Гараж САК, Тула</span><span>Демо‑версия сайта</span></div></footer>
+<script>
+(function(){
+  var form=document.getElementById("form"),wa=document.getElementById("wa");
+  function upd(){
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    var car=document.getElementById("c").value.trim(),t=document.getElementById("t").value.trim(),n=document.getElementById("n").value.trim();
+    wa.href="https://wa.me/"+wa.dataset.n+"?text="+encodeURIComponent("Здравствуйте! Хочу записаться: "+w+"."+(car?"\nАвтомобиль: "+car+".":"")+(t?"\n"+t:"")+(n?"\n"+n:""));
+  }
+  form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault();});upd();
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>

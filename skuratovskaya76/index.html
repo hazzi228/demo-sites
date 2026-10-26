@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Автосервис на Скуратовской</title>
+<meta name="description" content="Автосервис на Скуратовской, 76 в Туле. Кузовной ремонт и покраска, ремонт бамперов, полировка, двигатель, ходовая, сход-развал.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600&family=Roboto+Mono:wght@400;500&display=swap">
+<style>
+/* Paint shop: a row of paint-chip swatches as signature, cherry lacquer red accent on cool primer grey, elegant serif display. */
+:root{--display:"Playfair Display",Georgia,serif;--body:"Source Sans 3","Segoe UI",Roboto,sans-serif;--mono:"Roboto Mono",ui-monospace,Menlo,monospace;--dw:800;--dls:-.01em;--dtt:none;--r:2px;--h1:clamp(2.5rem,6vw,4.8rem);--h2:clamp(2rem,4.2vw,3.2rem);--bg:#ECEDEF;--panel:#F8F8F9;--ink:#17181B;--muted:#5B5E66;--rule:#CDD0D6;--acc:#A8102B;--acc-text:#A8102B;--on-acc:#FFFFFF;--band:#17181B;--on-band:#F1F1F3;--head-bg:#ECEDEF;--head-ink:#17181B}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#131418;--panel:#1B1C21;--ink:#ECEDF0;--muted:#A0A3AB;--rule:#2C2E35;--acc:#E0405C;--acc-text:#F0627B;--on-acc:#1A0408;--band:#0C0D10;--on-band:#ECEDF0;--head-bg:#131418;--head-ink:#ECEDF0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#131418;--panel:#1B1C21;--ink:#ECEDF0;--muted:#A0A3AB;--rule:#2C2E35;--acc:#E0405C;--acc-text:#F0627B;--on-acc:#1A0408;--band:#0C0D10;--on-band:#ECEDF0;--head-bg:#131418;--head-ink:#ECEDF0;color-scheme:dark}
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.62 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head-bg)}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.04;letter-spacing:var(--dls);margin:0;text-wrap:balance;text-transform:var(--dtt)}
+.k{font:500 .76rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--head-bg);color:var(--head-ink);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:var(--dw) 1.25rem/1 var(--display);text-transform:var(--dtt);letter-spacing:var(--dls)}
+.logo small{display:block;font:400 .72rem var(--mono);opacity:.7;margin-top:3px}
+.logo .m{flex:none}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:.92rem;font-weight:500;opacity:.72}
+.top nav a:hover{opacity:1}
+.tel{font:500 .95rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--on-acc);font:600 .97rem/1 var(--body);padding:14px 20px;border-radius:var(--r);text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}.top .tel{font-size:.82rem}}
+.hero{padding-block:clamp(36px,6vw,80px);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:var(--h1);margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--acc-text)}
+.hero .lede{font-size:1.14rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{font:400 .8rem var(--mono);border:1px solid var(--rule);background:var(--panel);padding:5px 10px;border-radius:999px}
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px 48px;align-items:end;margin-bottom:34px}
+@media (max-width:800px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:var(--h2)}
+.sh p{margin:0;color:var(--muted);max-width:56ch}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;border-top:2px solid var(--ink)}
+@media (max-width:900px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.groups{grid-template-columns:1fr}}
+.groups div{padding:20px 0 22px;border-bottom:1px solid var(--rule)}
+.groups h3{font-size:1.3rem;margin-bottom:8px}
+.groups ul{list-style:none;margin:0;padding:0;color:var(--muted);font-size:.97rem}
+.groups li{padding:2px 0}
+.price{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 48px;align-items:start}
+@media (max-width:800px){.price{grid-template-columns:1fr}}
+.price h3{font-size:1.6rem}
+.price .pl{border-top:2px solid var(--ink)}
+.pi{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.pi span{min-width:0}
+.pi i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px);min-width:12px}
+.pi b{font:500 .98rem var(--mono);white-space:nowrap}
+.pnote{font:400 .8rem var(--mono);color:var(--muted);margin:10px 0 0}
+.band{background:var(--band);color:var(--on-band)}
+.band .k{color:color-mix(in srgb,var(--on-band) 62%,transparent)}
+.band .sh p{color:color-mix(in srgb,var(--on-band) 72%,transparent)}
+.ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.ppl div{border-top:3px solid var(--acc);padding-top:14px}
+.ppl b{display:block;font:var(--dw) 1.5rem/1.1 var(--display);text-transform:var(--dtt)}
+.ppl span{display:block;font:400 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin:6px 0 10px}
+.ppl p{margin:0;opacity:.85;font-size:.97rem}
+.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rv{grid-template-columns:1fr}}
+.rv figure{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px}
+.rv blockquote{margin:0;font-size:1.03rem}
+.rv figcaption{margin-top:auto;font:400 .78rem var(--mono);color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font:var(--dw) 3rem/1 var(--display);color:var(--acc-text)}
+.score span{font:400 .8rem var(--mono);color:var(--muted)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--acc)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--bg);padding:8px 13px;border-radius:999px;font:500 .92rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.pick input:focus-visible+label{outline:3px solid var(--acc);outline-offset:2px}
+.facts{border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .7rem var(--mono);padding:3px 7px;border-radius:4px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .78rem var(--mono);color:var(--muted)}
+
+.chip{background:var(--panel);border:1px solid var(--rule);box-shadow:0 24px 40px -30px rgba(0,0,0,.4)}
+.chip .sw{display:grid;grid-template-columns:repeat(5,1fr);height:150px}
+.chip .sw i{display:block}
+.chip .ci{padding:22px}
+.chip p{margin:8px 0 18px;color:var(--muted)}
+.chip .foot{display:flex;align-items:baseline;gap:12px;border-top:1px solid var(--rule);padding-top:14px}
+.chip .foot b{font:800 2.6rem/1 var(--display);color:var(--acc-text)}
+.hero h1 em{font-style:italic}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="m" width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="var(--acc)"/><circle cx="15" cy="15" r="5" fill="var(--bg)"/></svg><span><b>Скуратовская, 76</b><small>автосервис и кузовной цех</small></span></a>
+    <nav aria-label="Разделы"><a href="#services">Услуги</a><a href="#people">Мастера</a><a href="#reviews">Отзывы</a><a href="#contact">Запись</a></nav>
+    <a class="tel num" href="tel:+79606000077">+7 960 600-00-77</a>
+    <a class="btn" href="#contact">Записаться</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · ул. Скуратовская, 76</p>
+        <h1>Кузов, покраска <em>и механика</em> в одном сервисе</h1>
+        <p class="lede">Кузовной ремонт и покраска, ремонт пластиковых бамперов, полировка. Двигатель, ходовая, тормоза, диагностика, сход‑развал и шиномонтаж. Заметим то, что стоит поменять сейчас, чтобы потом не делать дважды.</p>
+        <div class="cta"><a class="btn" href="#contact">Записаться в WhatsApp</a><a class="btn out num" href="tel:+79606000077">+7 960 600-00-77</a></div>
+        <div class="chips"><span>Скидки</span><span>Сход‑развал</span><span>Пункт выдачи запчастей</span><span>Оплата картой</span></div>
+      </div>
+      <aside class="chip"><div class="sw" aria-hidden="true"><i style="background:#A8102B"></i><i style="background:#1E3A5F"></i><i style="background:#C9CCD1"></i><i style="background:#111"></i><i style="background:#F2F2EE"></i></div>
+  <div class="ci"><span class="k">Подбор краски по коду</span><p>Покрасим элемент в тон заводскому цвету, отполируем, вернём блеск.</p>
+  <div class="foot"><b class="num">4,6</b><span class="k">232 оценки · 98 отзывов</span></div></div></aside>
+    </div>
+  </section>
+  
+  <section id="services">
+    <div class="wrap">
+      <div class="sh"><h2>Работы</h2><p>Отечественные автомобили и иномарки. Стоимость кузовных работ называем после осмотра.</p></div>
+      <div class="groups"><div><h3>Кузов</h3><ul><li>Кузовной ремонт</li><li>Покраска</li><li>Ремонт пластиковых бамперов</li><li>Полировка</li></ul></div><div><h3>Ходовая</h3><ul><li>Диагностика подвески</li><li>Ремонт ходовой</li><li>Тормозная система</li><li>Сход‑развал</li></ul></div><div><h3>Двигатель</h3><ul><li>Ремонт двигателя и ГБЦ</li><li>Чистка форсунок</li><li>Компьютерная диагностика</li></ul></div><div><h3>Колёса</h3><ul><li>Шиномонтаж</li><li>Балансировка</li></ul></div><div><h3>Обслуживание</h3><ul><li>Замена масла</li><li>Комплексное ТО</li><li>Установка парктроников</li></ul></div><div><h3>Выхлоп</h3><ul><li>Ремонт выхлопной системы</li></ul></div></div>
+      <div class="price"><div><h3>Цены</h3><p class="pnote">Цены из карточки сервиса на Яндекс Картах. Остальное называем после осмотра, до начала работ.</p></div><div class="pl num"><div class="pi"><span>Замена масла в двигателе</span><i></i><b>800 ₽</b></div><div class="pi"><span>Диагностика подвески</span><i></i><b>500 ₽</b></div></div></div>
+    </div>
+  </section>
+  <section id="people" class="band">
+    <div class="wrap">
+      <div class="sh"><h2>Мастера</h2><p>Клиенты в отзывах называют мастеров по именам.</p></div>
+      <div class="ppl"><div><b>Сергей</b><span>мастер</span><p>«Мастеру Сергею особая благодарность».</p></div><div><b>Александр</b><span>мастер</span><p>Клиенты отдельно благодарят Александра в отзывах.</p></div><div><b>Бригада</b><span>механика и кузов</span><p>«Здесь реально лечат автомобили. Работают настоящие профессионалы».</p></div></div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sh"><h2>Отзывы</h2><div class="score"><b class="num">4,6</b><span>232 оценки · 98 отзывов<br>Яндекс Карты</span></div></div>
+      <div class="rv"><figure><blockquote>«Здесь реально лечат автомобили. Работают настоящие профессионалы»</blockquote><figcaption>Михаил Т. · Яндекс Карты</figcaption></figure><figure><blockquote>«Ребята заметили плохую шаровую и предложили заменить, дабы потом не делать ещё раз»</blockquote><figcaption>Дина Шелатуркина · Яндекс Карты</figcaption></figure><figure><blockquote>«Качество: всё сделано аккуратно и чётко»</blockquote><figcaption>Елена Максимова · Яндекс Карты</figcaption></figure></div>
+      <p style="margin-top:22px"><a class="k" href="https://yandex.ru/maps/org/avtoservis/1322009709/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах ↗</a></p>
+    </div>
+  </section>
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Запись</p>
+        <h2>Записаться в WhatsApp</h2>
+        <p>Заполните форму, и откроется WhatsApp с готовым сообщением мастеру.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="c">Автомобиль</label><input id="c" placeholder="Например, Kia Rio 2017"></div>
+        </div>
+        <fieldset class="f"><legend>Что нужно</legend><div class="pick"><input type="radio" name="w" id="x0" value="кузовной ремонт и покраска" checked><label for="x0">Кузов и покраска</label><input type="radio" name="w" id="x1" value="ремонт бампера"><label for="x1">Бампер</label><input type="radio" name="w" id="x2" value="полировка"><label for="x2">Полировка</label><input type="radio" name="w" id="x3" value="ходовая"><label for="x3">Ходовая</label><input type="radio" name="w" id="x4" value="замена масла"><label for="x4">ТО и масло</label><input type="radio" name="w" id="x5" value="сход-развал"><label for="x5">Сход‑развал</label></div></fieldset>
+        <div class="f"><label for="t">Что случилось</label><textarea id="t" placeholder="Коротко опишите проблему"></textarea></div>
+        <div class="cta"><a class="btn" id="wa" data-n="79606000077" href="https://wa.me/79606000077" target="_blank" rel="noopener">Открыть WhatsApp</a><a class="btn out" href="https://t.me/Skuratovskaya_76" target="_blank" rel="noopener">Telegram</a></div>
+      </form>
+      <div>
+        <p class="k">Контакты</p>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin:10px 0 22px">Скуратовская, 76</h2>
+        <div class="facts num">
+          <div><span>Телефон</span><span><span id="tel">+7 960 600-00-77</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Адрес</span><span>Тула, ул. Скуратовская, 76</span></div><div><span>Режим</span><span>до 19:00, по записи</span></div><div><span>Оплата</span><span>карта, наличные, перевод</span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/avtoservis/1322009709/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© Скуратовская, 76, Тула</span><span>Демо‑версия сайта</span></div></footer>
+<script>
+(function(){
+  var form=document.getElementById("form"),wa=document.getElementById("wa");
+  function upd(){
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    var car=document.getElementById("c").value.trim(),t=document.getElementById("t").value.trim(),n=document.getElementById("n").value.trim();
+    wa.href="https://wa.me/"+wa.dataset.n+"?text="+encodeURIComponent("Здравствуйте! Хочу записаться: "+w+"."+(car?"\nАвтомобиль: "+car+".":"")+(t?"\n"+t:"")+(n?"\n"+n:""));
+  }
+  form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault();});upd();
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>
