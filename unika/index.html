@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Уника, автосервис в Туле</title>
+<meta name="description" content="Автосервис «Уника» на ул. Металлургов, 86/3 в Туле. Компьютерная диагностика, автоэлектрика, ремонт двигателя и ходовой, кондиционеры, чип-тюнинг. Открытый прайс.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Mulish:wght@400;600;700&family=Ubuntu+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: a wiring schematic. Fine dot-grid paper, thin 1px traces, teal signal colour for the one accent; the price list is the centrepiece. */
+:root{
+  --bg:#F5F6F3;
+  --panel:#FFFFFF;
+  --ink:#141A1F;
+  --muted:#5D666D;
+  --rule:#D6DBDA;
+  --dot:rgba(20,26,31,.08);
+  --teal:#00766A;
+  --teal-soft:#DDEFEB;
+  --on-teal:#FFFFFF;
+  --display:"Jost", "Futura", "Century Gothic", system-ui, sans-serif;
+  --body:"Mulish", "Segoe UI", Roboto, system-ui, sans-serif;
+  --mono:"Ubuntu Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1315; --panel:#161B1E; --ink:#E6ECEC; --muted:#99A4A6; --rule:#283034; --dot:rgba(230,236,236,.06);
+  --teal:#3CC4B2; --teal-soft:#14302C; --on-teal:#06201C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1315; --panel:#161B1E; --ink:#E6ECEC; --muted:#99A4A6; --rule:#283034; --dot:rgba(230,236,236,.06);
+  --teal:#3CC4B2; --teal-soft:#14302C; --on-teal:#06201C; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.6 var(--body);-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(var(--dot) 1px,transparent 1.2px);background-size:18px 18px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1160px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.04;letter-spacing:-.015em;margin:0;text-wrap:balance}
+.k{font:400 .82rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{flex:none}
+.logo b{font:700 1.35rem/1 var(--display);letter-spacing:.02em;text-transform:uppercase}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{text-decoration:none;font:500 .95rem var(--display);color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+.tel{font:700 1rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--on-teal);font:600 1rem/1 var(--display);padding:14px 20px;border-radius:4px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:var(--panel);color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(40px,6vw,84px) clamp(32px,5vw,60px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:end}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.6rem,6vw,4.8rem);font-weight:600;margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero .lede{font-size:1.15rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.trace{display:block;width:100%;height:64px;margin-top:34px}
+.trace path{fill:none;stroke:var(--teal);stroke-width:2;stroke-linejoin:round}
+.trace line{stroke:var(--rule);stroke-width:1}
+
+.meter{background:var(--panel);border:1px solid var(--ink);display:grid}
+.meter>div{padding:16px 18px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.meter>div:last-child{border-bottom:0}
+.meter .big{font:600 3.4rem/1 var(--display);color:var(--teal)}
+.meter b{font:600 1.1rem var(--display)}
+.badge{display:inline-flex;align-items:center;gap:8px;font:700 .82rem var(--mono);color:var(--teal);border:1px solid currentColor;padding:4px 9px;border-radius:999px}
+
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:16px 48px;align-items:end;margin-bottom:34px}
+@media (max-width:800px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:clamp(2rem,4.2vw,3.2rem)}
+.sh p{margin:0;color:var(--muted);max-width:56ch}
+
+/* specialities */
+.spec{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--ink);background:var(--panel)}
+@media (max-width:900px){.spec{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.spec{grid-template-columns:1fr}}
+.spec div{padding:22px 20px 24px;border-right:1px solid var(--rule)}
+.spec div:last-child{border-right:0}
+@media (max-width:900px){.spec div{border-bottom:1px solid var(--rule)}.spec div:nth-child(2n){border-right:0}}
+.spec .code{font:700 .82rem var(--mono);color:var(--teal)}
+.spec h3{font-size:1.35rem;margin:10px 0 8px}
+.spec p{margin:0;color:var(--muted);font-size:.95rem}
+
+/* price list */
+.prices{background:var(--panel);border-block:1px solid var(--rule)}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.tabs button{font:500 .95rem var(--display);background:transparent;color:var(--ink);border:1px solid var(--rule);padding:8px 14px;border-radius:999px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.search{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--ink);padding:6px 0;margin-bottom:8px;max-width:420px}
+.search input{flex:1;border:0;background:transparent;color:var(--ink);font:400 1rem var(--body);padding:8px 0;min-width:0}
+.search input:focus{outline:none}
+.plist{columns:2 420px;column-gap:48px}
+.pgroup{break-inside:avoid;margin:18px 0 8px}
+.pgroup h3{font:600 1.15rem var(--display);padding-bottom:8px;border-bottom:2px solid var(--ink);margin-bottom:4px}
+.pitem{display:flex;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:.97rem}
+.pitem span:first-child{min-width:0}
+.pitem i{flex:1;min-width:12px}
+.pitem b{font:700 1rem var(--mono);white-space:nowrap}
+.empty{color:var(--muted);padding:20px 0}
+.pnote{margin-top:22px;font:400 .85rem var(--mono);color:var(--muted)}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+@media (max-width:1000px){.team{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){.team{grid-template-columns:1fr}}
+.team div{background:var(--panel);border:1px solid var(--rule);padding:18px;display:flex;flex-direction:column;gap:8px}
+.team .ini{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--teal-soft);color:var(--teal);font:600 1.15rem var(--display)}
+.team b{font:600 1.2rem var(--display)}
+.team span{font:400 .8rem var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.team p{margin:0;font-size:.92rem;color:var(--muted)}
+
+.brands{margin-top:36px;font:400 .95rem/1.9 var(--mono);color:var(--muted)}
+.brands b{color:var(--ink)}
+
+/* reviews */
+.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rv{grid-template-columns:1fr}}
+.rv figure{margin:0;padding:22px;border-left:2px solid var(--teal);background:var(--panel);display:flex;flex-direction:column;gap:14px}
+.rv blockquote{margin:0;font-size:1.02rem}
+.rv figcaption{margin-top:auto;font:400 .82rem var(--mono);color:var(--muted)}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--panel);border:1px solid var(--ink);padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.8rem,3.4vw,2.4rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:400 .82rem var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:4px;padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--teal)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--bg);padding:8px 13px;border-radius:999px;font:500 .92rem var(--display);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--teal);border-color:var(--teal);color:var(--on-teal)}
+.pick input:focus-visible+label{outline:2px solid var(--teal);outline-offset:2px}
+.facts{border-top:1px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:400 .82rem var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding-top:3px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .75rem var(--mono);padding:2px 7px;border-radius:4px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .82rem var(--mono);color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Уника, на главную">
+      <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="4" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 15h5l2-6 4 10 2-4h5" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      <b>Уника</b>
+    </a>
+    <nav aria-label="Разделы">
+      <a href="#what">Специализация</a>
+      <a href="#prices">Цены</a>
+      <a href="#team">Мастера</a>
+      <a href="#contact">Запись</a>
+    </nav>
+    <a class="tel num" href="tel:+79361007171">+7 936 100-71-71</a>
+    <a class="btn" href="#contact">Записаться</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · ул. Металлургов, 86/3</p>
+        <h1>Диагностика, автоэлектрика и ремонт. <em>Цены открыты заранее.</em></h1>
+        <p class="lede">Ищем причину, а не меняем детали наугад. Двигатель, ходовая, кондиционеры, чистка форсунок, чип‑тюнинг. Европейские, японские, корейские и китайские автомобили.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Записаться в WhatsApp</a>
+          <a class="btn out" href="#prices">Смотреть прайс</a>
+        </div>
+        <svg class="trace" viewBox="0 0 600 64" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="0" y1="32" x2="600" y2="32"/>
+          <path d="M0 32 H90 L100 32 L108 10 L118 54 L128 22 L136 32 H260 L268 32 L276 6 L288 58 L298 18 L306 32 H430 L438 32 L446 12 L456 52 L466 24 L474 32 H600"/>
+        </svg>
+      </div>
+      <aside class="meter" aria-label="Показатели">
+        <div><span class="k">Яндекс Карты</span><span class="badge">Хорошее место 2026</span></div>
+        <div><span class="big num">4,7</span><span class="k num">111 оценок · 62 отзыва</span></div>
+        <div><span class="k">Диагностика</span><b class="num">94% довольны</b></div>
+        <div><span class="k">Персонал</span><b class="num">94% довольны</b></div>
+        <div><span class="k">Сегодня</span><b id="status">до 19:00</b></div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="what" style="padding-top:0">
+    <div class="wrap">
+      <div class="spec">
+        <div><span class="code">01 · ДИАГНОСТИКА</span><h3>Компьютерная и эндоскопия</h3><p>Считываем ошибки блока, смотрим цилиндры камерой без разборки, проверяем авто перед покупкой.</p></div>
+        <div><span class="code">02 · ЭЛЕКТРИКА</span><h3>Автоэлектрик</h3><p>Генераторы, стартеры, сигнализации, парктроники, дополнительное оборудование.</p></div>
+        <div><span class="code">03 · ТОПЛИВО</span><h3>Форсунки и чип‑тюнинг</h3><p>Промывка форсунок без снятия и на стенде, чистка дросселя, настройка блока.</p></div>
+        <div><span class="code">04 · КЛИМАТ</span><h3>Кондиционеры</h3><p>Заправка, поиск утечки, ремонт компрессора, промывка радиатора печки.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices" class="prices">
+    <div class="wrap">
+      <div class="sh">
+        <h2>Прайс на работы</h2>
+        <p>Стоимость работ без запчастей. Точную сумму подтверждаем после осмотра, до начала ремонта.</p>
+      </div>
+      <div class="tabs" id="tabs" role="group" aria-label="Раздел прайса"></div>
+      <label class="search"><span class="k">Поиск</span><input id="q" type="search" placeholder="Например, колодки или форсунки" autocomplete="off"></label>
+      <div class="plist num" id="plist"></div>
+      <p class="pnote">Цены с карточки «Уники» на Яндекс Картах. Указаны в рублях, «от».</p>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="wrap">
+      <div class="sh">
+        <h2>Кто будет чинить</h2>
+        <p>В отзывах клиенты называют мастеров по именам. Вот кого упоминают чаще всего.</p>
+      </div>
+      <div class="team">
+        <div><span class="ini">В</span><b>Вадим</b><span>руководитель</span><p>«Очень грамотно всё рассказал и показал, в чём проблема».</p></div>
+        <div><span class="ini">М</span><b>Михаил</b><span>автоэлектрик</span><p>«Грамотный технический специалист». Клиент сэкономил более 30 тыс. ₽.</p></div>
+        <div><span class="ini">П</span><b>Павел</b><span>мастер</span><p>«Павел установил, всё работает отлично».</p></div>
+        <div><span class="ini">М</span><b>Максим</b><span>мастер</span><p>«Нашли неисправность, через 4 часа я снова на колёсах».</p></div>
+        <div><span class="ini">Д</span><b>Дмитрий</b><span>мастер</span><p>«Выполнил свою работу на 5 баллов из 5».</p></div>
+      </div>
+      <p class="brands"><b>Марки:</b> Toyota, Lexus, Nissan, Honda, Mazda, Mitsubishi, Subaru, Suzuki · Kia, Hyundai, Genesis, SsangYong · Chery, Haval, Geely и другие китайские · VW, Škoda, Audi, BMW, Mercedes‑Benz, Porsche, Opel, Ford, Renault, Peugeot, Citroën, Volvo, Chevrolet · коммерческий транспорт</p>
+    </div>
+  </section>
+
+  <section id="reviews" style="padding-top:0">
+    <div class="wrap">
+      <div class="sh"><h2>Отзывы</h2><p><a href="https://yandex.ru/maps/org/unika/89372787062/reviews/" target="_blank" rel="noopener">Все 62 отзыва на Яндекс Картах ↗</a></p></div>
+      <div class="rv">
+        <figure><blockquote>«Чётко по времени приняли, нашли неисправность, заказали запчасти, через 4 часа я снова на колёсах».</blockquote><figcaption>Александр Рыжов · мастер Максим</figcaption></figure>
+        <figure><blockquote>«Директор Вадим очень грамотно всё рассказал и показал, в чём проблема, и устранили всё на следующий день».</blockquote><figcaption>Анастасия · Яндекс Карты</figcaption></figure>
+        <figure><blockquote>«Автосервис понравился. В частности, мастер Дмитрий выполнил свою работу на 5 баллов из 5».</blockquote><figcaption>Иван Чижов · июнь 2025 · Lada Vesta</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Запись</p>
+        <h2>Записаться в WhatsApp</h2>
+        <p>Заполните форму, и откроется WhatsApp с готовым сообщением. Ответим и предложим время.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="c">Автомобиль</label><input id="c" placeholder="Например, Kia Sportage 2018"></div>
+        </div>
+        <fieldset class="f">
+          <legend>Что нужно</legend>
+          <div class="pick">
+            <input type="radio" name="w" id="x1" value="диагностика" checked><label for="x1">Диагностика</label>
+            <input type="radio" name="w" id="x2" value="автоэлектрика"><label for="x2">Электрика</label>
+            <input type="radio" name="w" id="x3" value="ходовая"><label for="x3">Ходовая</label>
+            <input type="radio" name="w" id="x4" value="ТО и замена масла"><label for="x4">ТО</label>
+            <input type="radio" name="w" id="x5" value="кондиционер"><label for="x5">Кондиционер</label>
+            <input type="radio" name="w" id="x6" value="осмотр перед покупкой"><label for="x6">Проверка перед покупкой</label>
+          </div>
+        </fieldset>
+        <div class="f"><label for="t">Что случилось</label><textarea id="t" placeholder="Например: горит check engine, плавают обороты"></textarea></div>
+        <div class="cta">
+          <a class="btn" id="wa" href="https://wa.me/79361007171" target="_blank" rel="noopener">Открыть WhatsApp</a>
+          <a class="btn out" href="https://t.me/89361007171" target="_blank" rel="noopener">Telegram</a>
+        </div>
+      </form>
+
+      <div>
+        <p class="k">Контакты</p>
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.4rem);margin:10px 0 22px">Металлургов, 86/3</h2>
+        <div class="facts num">
+          <div><span>Телефон</span><span><span id="tel">+7 936 100-71-71</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Режим</span><span>Пн–Сб, 9:00–19:00</span></div>
+          <div><span>Оплата</span><span>наличные, карта, СБП, безнал</span></div>
+          <div><span>На месте</span><span>парковка, гарантия на работы</span></div>
+          <div><span>Соцсети</span><span><a href="https://vk.ru/unicaauto" target="_blank" rel="noopener">ВКонтакте ↗</a></span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/unika/89372787062/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© Автосервис «Уника», Тула</span><span>Демо‑версия сайта</span></div></footer>
+
+<script>
+(function(){
+  var P={
+    "ТО":[["Замена масла в двигателе",1300],["Замена масла с промывкой двигателя",1700],["Замена масла в МКПП",1400],["Замена масла в раздатке / редукторе",1200],["Частичная замена масла в АКПП",1700],["Замена масла в АКПП со снятием поддона",3500],["Замена жидкости ГУР",1400],["Замена воздушного фильтра",400],["Замена салонного фильтра",400],["Замена топливного фильтра",500],["Замена тормозной жидкости",1400],["Замена охлаждающей жидкости",2000]],
+    "Двигатель":[["Комплексная диагностика двигателя",1000],["Чтение ошибок ЭБУ",800],["Замена свечей зажигания",1200],["Промывка бензиновых форсунок без снятия",1800],["Промывка форсунок с диагностикой на стенде",2400],["Снятие и установка форсунок",1000],["Снятие и установка форсунок непосредственного впрыска",2600],["Чистка дроссельной заслонки",1200],["Замена генератора",2500],["Замена стартера",2500],["Замена сцепления",12500],["Ремонт ГБЦ",20000],["Ремонт бензинового двигателя",30000]],
+    "Ходовая":[["Замена шаровой опоры",1200],["Замена наружного ШРУСа",2000],["Замена внутреннего ШРУСа",2800],["Замена пыльника ШРУСа",2500],["Замена ступичного подшипника",2800],["Замена ступицы в сборе",2800],["Замена стойки стабилизатора",1000],["Замена заднего амортизатора",1800],["Замена переднего амортизатора",2500]],
+    "Тормоза":[["Замена передних колодок",1700],["Замена задних дисковых колодок",1800],["Замена задних барабанных колодок",3200],["Ремонт суппорта",1000],["Замена суппорта",1200],["Замена тормозных дисков (ось)",3000],["Замена тормозных барабанов",3200],["Изготовление тормозной трубки",1000],["Проточка диска, барабана, маховика",800]],
+    "Рулевое":[["Замена рулевой тяги",1300],["Замена пыльника рулевой тяги",1000],["Замена рулевого наконечника",800],["Замена рулевой рейки",5000]],
+    "Кондиционер и прочее":[["Заправка кондиционера",2200],["Поиск утечки кондиционера",1000],["Ремонт компрессора кондиционера",800],["Промывка радиатора печки без снятия",3000],["Сход‑развал 3D",2000],["Шиномонтаж, колесо",300],["Проверка автомобиля перед покупкой",4000]]
+  };
+  var cats=["Все"].concat(Object.keys(P)), cur="Все";
+  var tabs=document.getElementById("tabs"), list=document.getElementById("plist"), q=document.getElementById("q");
+  function fmt(n){return n.toLocaleString("ru-RU")+" ₽";}
+  cats.forEach(function(c){var b=document.createElement("button");b.type="button";b.textContent=c;b.setAttribute("aria-pressed",c===cur);b.onclick=function(){cur=c;[].forEach.call(tabs.children,function(x){x.setAttribute("aria-pressed",x.textContent===cur);});render();};tabs.appendChild(b);});
+  function render(){
+    var s=q.value.trim().toLowerCase(), html="";
+    Object.keys(P).forEach(function(c){
+      if(cur!=="Все"&&cur!==c) return;
+      var rows=P[c].filter(function(r){return !s||r[0].toLowerCase().indexOf(s)>-1;});
+      if(!rows.length) return;
+      html+='<div class="pgroup"><h3>'+c+'</h3>'+rows.map(function(r){return '<div class="pitem"><span>'+r[0]+'</span><i></i><b>от '+fmt(r[1])+'</b></div>';}).join("")+'</div>';
+    });
+    list.innerHTML=html||'<p class="empty">Такой работы в прайсе нет. Напишите нам, назовём цену.</p>';
+  }
+  q.addEventListener("input",render); render();
+
+  var now=new Date(),d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+  document.getElementById("status").textContent=(d>=1&&d<=6&&h>=9&&h<19)?"открыто до 19:00":"сейчас закрыто";
+
+  var form=document.getElementById("form"),wa=document.getElementById("wa");
+  function upd(){
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    var car=document.getElementById("c").value.trim(),t=document.getElementById("t").value.trim(),n=document.getElementById("n").value.trim();
+    wa.href="https://wa.me/79361007171?text="+encodeURIComponent("Здравствуйте! Хочу записаться: "+w+"."+(car?"\nАвтомобиль: "+car+".":"")+(t?"\n"+t:"")+(n?"\n"+n:""));
+  }
+  form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault();});upd();
+
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>
