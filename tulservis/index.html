@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ТулСервис на Овражной</title>
+<meta name="description" content="Автосервис «ТулСервис» на ул. Овражной, 17 в Туле. Мастер Александр: двигатель, ходовая, сцепление, электрика, выездная диагностика, шиномонтаж. 5,0 на Яндекс Картах.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Fira+Sans:wght@400;500;600&family=PT+Mono&display=swap">
+<style>
+/* Layout: a vehicle service book (сервисная книжка). Pale security-paper ground with a faint guilloche, entries as ruled rows, violet rubber-stamp ink as the only accent. */
+:root{
+  --paper:#EDF0EA;
+  --sheet:#F8FAF6;
+  --ink:#1D2726;
+  --muted:#5B6764;
+  --rule:#C8D0C8;
+  --stamp:#4A3A9C;      /* фиолетовая печать */
+  --stamp-soft:#E6E2F4;
+  --on-stamp:#FFFFFF;
+  --guil:rgba(74,58,156,.07);
+  --display:"Unbounded", "Arial Black", system-ui, sans-serif;
+  --body:"Fira Sans", "Segoe UI", Roboto, system-ui, sans-serif;
+  --mono:"PT Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#121615; --sheet:#181D1C; --ink:#E4EAE6; --muted:#97A39F; --rule:#2A3331;
+  --stamp:#9C8CF0; --stamp-soft:#221E38; --on-stamp:#120F22; --guil:rgba(156,140,240,.06); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#121615; --sheet:#181D1C; --ink:#E4EAE6; --muted:#97A39F; --rule:#2A3331;
+  --stamp:#9C8CF0; --stamp-soft:#221E38; --on-stamp:#120F22; --guil:rgba(156,140,240,.06); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.02rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--stamp);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.k{font:400 .78rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{text-decoration:none;display:flex;align-items:baseline;gap:10px}
+.logo b{font:800 1.15rem/1 var(--display);letter-spacing:-.02em}
+.logo b span{color:var(--stamp)}
+.logo small{font:400 .74rem var(--mono);color:var(--muted)}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{font-size:.9rem;color:var(--muted);text-decoration:none;font-weight:500}
+.top nav a:hover{color:var(--ink)}
+.tel{font:400 .98rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--stamp);color:var(--on-stamp);font:600 .95rem/1 var(--body);padding:14px 20px;border-radius:8px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(36px,6vw,80px);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.2rem,5.2vw,4rem);margin:16px 0 22px}
+.hero h1 span{color:var(--stamp)}
+.hero .lede{font-size:1.15rem;color:var(--muted);max-width:50ch;margin:0 0 28px}
+.hero .lede b{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chips span{font:400 .8rem var(--mono);border:1px solid var(--rule);background:var(--sheet);padding:5px 10px;border-radius:999px}
+
+/* the book */
+.book{position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:6px;padding:22px 22px 64px;margin-bottom:40px;
+  background-image:repeating-radial-gradient(circle at 100% 0,var(--guil) 0 1px,transparent 1px 7px),repeating-radial-gradient(circle at 0 100%,var(--guil) 0 1px,transparent 1px 9px)}
+.book .bh{display:flex;justify-content:space-between;gap:10px;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:6px}
+.book .bh b{font:700 .95rem var(--display)}
+.entry{display:grid;grid-template-columns:4.6rem minmax(0,1fr) auto;gap:12px;padding:11px 0;border-bottom:1px solid var(--rule);font-size:.93rem;align-items:baseline}
+.entry .d{font:400 .78rem var(--mono);color:var(--muted)}
+.entry .m{font:400 .74rem var(--mono);color:var(--stamp)}
+.stampmark{position:absolute;right:18px;bottom:-50px;width:132px;height:132px;border-radius:50%;border:3px solid var(--stamp);color:var(--stamp);display:grid;place-items:center;text-align:center;transform:rotate(-12deg);background:color-mix(in srgb,var(--sheet) 80%,transparent);box-shadow:inset 0 0 0 5px var(--sheet),inset 0 0 0 6px var(--stamp)}
+.stampmark b{display:block;font:800 1.8rem/1 var(--display)}
+.stampmark small{display:block;font:400 .62rem/1.25 var(--mono);text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+@media (max-width:520px){.stampmark{width:108px;height:108px;right:8px}.stampmark b{font-size:1.45rem}}
+
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 48px;margin-bottom:38px}
+.sh h2{font-size:clamp(1.8rem,3.8vw,2.8rem)}
+.sh p{margin:0;color:var(--muted);max-width:52ch}
+
+/* master */
+.master{background:var(--sheet);border-block:1px solid var(--rule)}
+.master .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(24px,5vw,64px);align-items:start}
+@media (max-width:860px){.master .wrap{grid-template-columns:1fr}}
+.master h2{font-size:clamp(1.9rem,4vw,3rem)}
+.master p{margin:0 0 16px}
+.said{display:grid;gap:14px;margin-top:8px}
+.said blockquote{margin:0;padding:14px 18px;background:var(--stamp-soft);border-radius:0 12px 12px 12px;font-size:.98rem}
+.said cite{display:block;font:400 .74rem var(--mono);font-style:normal;color:var(--muted);margin-top:6px}
+
+/* services as service-book rows */
+.svc{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.6fr) auto;gap:6px 28px;padding:18px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.row h3{font-size:1.1rem;font-weight:700}
+.row p{margin:0;color:var(--muted);font-size:.96rem}
+.row .tag{font:400 .74rem var(--mono);color:var(--stamp);border:1px solid currentColor;padding:2px 8px;border-radius:999px;white-space:nowrap}
+@media (max-width:760px){.row{grid-template-columns:1fr}.row .tag{justify-self:start}}
+
+/* extras */
+.extras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px}
+@media (max-width:860px){.extras{grid-template-columns:1fr}}
+.extras div{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:22px}
+.extras b{display:block;font:700 1.05rem/1.25 var(--display);margin-bottom:8px}
+.extras p{margin:0;color:var(--muted);font-size:.95rem}
+.extras div:first-child{background:var(--stamp);color:var(--on-stamp);border-color:var(--stamp)}
+.extras div:first-child p{color:color-mix(in srgb,var(--on-stamp) 85%,transparent)}
+
+/* reviews */
+.rv{columns:3 280px;column-gap:20px}
+.rv figure{break-inside:avoid;margin:0 0 20px;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:20px}
+.rv blockquote{margin:0 0 12px;font-size:1rem}
+.rv figcaption{font:400 .76rem var(--mono);color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font:800 2.8rem/1 var(--display);color:var(--stamp)}
+.score span{font:400 .8rem var(--mono);color:var(--muted)}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--sheet);border:1px solid var(--rule);border-radius:12px;padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.6rem,3.2vw,2.2rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:400 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--stamp);box-shadow:0 0 0 3px color-mix(in srgb,var(--stamp) 22%,transparent)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--paper);padding:8px 13px;border-radius:999px;font:500 .9rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--stamp);border-color:var(--stamp);color:var(--on-stamp)}
+.pick input:focus-visible+label{outline:3px solid var(--stamp);outline-offset:2px}
+.ok{border-left:3px solid var(--stamp);background:var(--stamp-soft);padding:12px 15px}
+.err{color:#B3261E;font-size:.88rem;margin:0}
+.foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.foot small{color:var(--muted);font-size:.84rem;max-width:32ch}
+.facts{border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:400 .76rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .7rem var(--mono);padding:3px 7px;border-radius:6px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .78rem var(--mono);color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><b>Тул<span>Сервис</span></b><small>ул. Овражная, 17</small></a>
+    <nav aria-label="Разделы">
+      <a href="#master">Мастер</a>
+      <a href="#services">Работы</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contact">Запись</a>
+    </nav>
+    <a class="tel num" href="tel:+79065344433">+7 906 534-44-33</a>
+    <a class="btn" href="#contact">Записаться</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · ул. Овражная, 17 · до 19:00</p>
+        <h1>Ремонт, после которого <span>не нужно ехать в другой сервис</span></h1>
+        <p class="lede">Мастер Александр находит причину, называет цену до начала работ и не навязывает лишнего. <b>Приезжают своим ходом, на аварийке и на эвакуаторе.</b></p>
+        <div class="cta">
+          <a class="btn" href="#contact">Записаться на ремонт</a>
+          <a class="btn out num" href="tel:+79065344433">+7 906 534-44-33</a>
+        </div>
+        <div class="chips"><span>Гарантия</span><span>Выезд на диагностику</span><span>Безнал для компаний</span><span>Можно с собакой</span></div>
+      </div>
+
+      <div class="book" aria-label="Сервисная книжка, пример записей">
+        <div class="bh"><b>Сервисная книжка</b><span class="k">пример</span></div>
+        <div class="entry"><span class="d">ТО‑1</span><span>Масло, фильтры, проверка ходовой</span><span class="m">✓ отметка</span></div>
+        <div class="entry"><span class="d">Ходовая</span><span>Рычаги, сайлентблоки, пружины, развал</span><span class="m">✓ отметка</span></div>
+        <div class="entry"><span class="d">Мотор</span><span>Эндоскопия цилиндров без разборки</span><span class="m">✓ отметка</span></div>
+        <div class="entry"><span class="d">Колёса</span><span>Сезонный шиномонтаж</span><span class="m">✓ отметка</span></div>
+        <div class="stampmark" aria-label="Оценка 5,0 на Яндекс Картах"><div><b class="num">5,0</b><small>118 оценок<br>Яндекс Карты</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="master" class="master">
+    <div class="wrap">
+      <div>
+        <p class="k">Кто чинит</p>
+        <h2 style="margin-top:12px">Мастер Александр</h2>
+      </div>
+      <div>
+        <p>В отзывах его чаще называют по имени, чем по названию сервиса. К нему приезжают после других мастерских, где «поменяли не те детали», и по рекомендации знакомых и коллег.</p>
+        <p>Порядок простой: диагностика, понятное объяснение, цена и сроки, потом работа. Запчасти подберём и закажем сами.</p>
+        <div class="said">
+          <blockquote>Мастера диагностировали проблему, подробно объяснили, что нужно заменить, согласовали цену и сроки. Работа выполнена качественно, без лишних навязываний.<cite>Алина · ноябрь 2025</cite></blockquote>
+          <blockquote>Мучался со стуком подвески не один месяц… только тут правильно диагностировали и приговорили амортизатор.<cite>Дмитрий · Яндекс Карты</cite></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sh">
+        <h2>Что делаем</h2>
+        <p>Отечественные автомобили и иномарки. Цену называем после диагностики и согласуем до начала работ.</p>
+      </div>
+      <div class="svc">
+        <div class="row"><h3>Двигатель</h3><p>Ремонт двигателя и ГБЦ, замена ремня ГРМ, система охлаждения, лопнувшие патрубки в тот же день.</p><span class="tag">эндоскопия</span></div>
+        <div class="row"><h3>Ходовая и тормоза</h3><p>Стуки в подвеске, рычаги, сайлентблоки, пружины, амортизаторы, тормозная система.</p><span class="tag">точная диагностика</span></div>
+        <div class="row"><h3>Сцепление</h3><p>Ремонт и замена сцепления.</p><span class="tag">с гарантией</span></div>
+        <div class="row"><h3>Электрика</h3><p>Ремонт генератора и стартера, установка дополнительного оборудования.</p><span class="tag">генератор · стартер</span></div>
+        <div class="row"><h3>ТО</h3><p>Комплексное обслуживание, замена масла и фильтров.</p><span class="tag">по регламенту</span></div>
+        <div class="row"><h3>Шиномонтаж</h3><p>Сезонная переобувка и балансировка.</p><span class="tag">новое</span></div>
+        <div class="row"><h3>Сварка и выхлоп</h3><p>Сварочные работы, ремонт выхлопной системы, установка фаркопа.</p><span class="tag">фаркоп</span></div>
+      </div>
+
+      <div class="extras">
+        <div><b>Выездная диагностика</b><p>Машина не заводится или ехать опасно? Мастер приедет и посмотрит на месте.</p></div>
+        <div><b>Для компаний</b><p>Обслуживаем служебные автомобили, оплата по безналичному расчёту.</p></div>
+        <div><b>Удобно ждать</b><p>Парковка, Wi‑Fi, доступная среда. Можно приехать с собакой.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" style="padding-top:0">
+    <div class="wrap">
+      <div class="sh">
+        <h2>Отзывы</h2>
+        <div class="score"><b class="num">5,0</b><span>118 оценок · 101 отзыв<br>Яндекс Карты</span></div>
+      </div>
+      <div class="rv">
+        <figure><blockquote>«Обратился к Александру после долгих мучений с автомобилем, в другом сервисе поменяли не те детали и проблему не решили».</blockquote><figcaption>Александр Семешин · август 2024</figcaption></figure>
+        <figure><blockquote>«Машину привезли на эвакуаторе, была замена задних рычагов, сайлентблоков, двух задних пружин и сделан развал. Рекомендую».</blockquote><figcaption>Анастасия · декабрь 2025</figcaption></figure>
+        <figure><blockquote>«По рекомендации отвезли машину на ремонт к Александру, и теперь обслуживаем авто у него!»</blockquote><figcaption>Оксана М. · Skoda Fabia</figcaption></figure>
+        <figure><blockquote>«Лопнули патрубки в такую зиму — мастер в этот же день быстро, без проблем всё качественно отремонтировал».</blockquote><figcaption>Руслан Ч. · Яндекс Карты</figcaption></figure>
+        <figure><blockquote>«Обратился к Александру по совету коллег. Нужно было провести комплексное ТО. Работы были выполнены оперативно и качественно».</blockquote><figcaption>Евгений Кузнецов · май 2025</figcaption></figure>
+        <figure><blockquote>«У ребят появился шиномонтаж, цены адекватные, качество на высоте!»</blockquote><figcaption>Владислав В. · Яндекс Карты</figcaption></figure>
+      </div>
+      <p style="margin-top:6px"><a class="k" href="https://yandex.ru/maps/org/tulservis/82274276265/reviews/" target="_blank" rel="noopener">Все 101 отзыв на Яндекс Картах ↗</a></p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Запись</p>
+        <h2>Оставьте заявку, Александр перезвонит</h2>
+        <p>Опишите, что с машиной. Перезвоним, уточним детали и предложим время.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="p">Телефон</label><input id="p" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 ___ ___-__-__"></div>
+        </div>
+        <div class="f"><label for="c">Автомобиль</label><input id="c" placeholder="Например, Skoda Octavia 2015"></div>
+        <fieldset class="f">
+          <legend>Что нужно</legend>
+          <div class="pick">
+            <input type="radio" name="w" id="x1" value="диагностика" checked><label for="x1">Диагностика</label>
+            <input type="radio" name="w" id="x2" value="ходовая"><label for="x2">Ходовая</label>
+            <input type="radio" name="w" id="x3" value="двигатель"><label for="x3">Двигатель</label>
+            <input type="radio" name="w" id="x4" value="ТО"><label for="x4">ТО</label>
+            <input type="radio" name="w" id="x5" value="шиномонтаж"><label for="x5">Шиномонтаж</label>
+            <input type="radio" name="w" id="x6" value="выезд мастера"><label for="x6">Нужен выезд</label>
+          </div>
+        </fieldset>
+        <div class="f"><label for="t">Что случилось</label><textarea id="t" placeholder="Когда появилось, как проявляется"></textarea></div>
+        <p class="err" id="err" hidden></p>
+        <div class="foot">
+          <button class="btn" type="submit">Отправить заявку</button>
+          <small>Перезвоним в рабочее время.</small>
+        </div>
+        <div class="ok" id="ok" hidden></div>
+      </form>
+
+      <div>
+        <div class="sh" style="margin-bottom:22px"><h2>Контакты</h2></div>
+        <div class="facts num">
+          <div><span>Адрес</span><span>Тула, ул. Овражная, 17</span></div>
+          <div><span>Телефон</span><span><span id="tel">+7 906 534-44-33</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Режим</span><span>Пн–Сб, 9:00–19:00</span></div>
+          <div><span>Оплата</span><span>наличные, безнал</span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/tulservis/82274276265/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>© ТулСервис, Тула</span><span>Демо‑версия сайта</span></div></footer>
+
+<script>
+(function(){
+  var form=document.getElementById("form"),err=document.getElementById("err"),ok=document.getElementById("ok");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    var name=document.getElementById("n").value.trim(),phone=document.getElementById("p").value.replace(/\D/g,"");
+    if(!name){err.textContent="Напишите имя, чтобы мастер знал, как к вам обращаться.";err.hidden=false;document.getElementById("n").focus();return;}
+    if(phone.length<10){err.textContent="Проверьте номер телефона: нужно 10–11 цифр.";err.hidden=false;document.getElementById("p").focus();return;}
+    err.hidden=true;
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    ok.textContent="Заявка принята, "+name+". Александр перезвонит по поводу «"+w+"». (Это демо: заявка никуда не отправлена.)";
+    ok.hidden=false;
+  });
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>
