@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Кофейня «В моменте»</title>
+<meta name="description" content="Кофейня «В моменте» в Туле, ул. Софьи Перовской 37, рядом с Белоусовским парком. Авторский кофе, десерты, сырники, настолки, терраса, можно с собакой.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Commissioner:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap">
+<style>
+/* Small evening coffee bar: dim espresso-brown, cream type, sea-buckthorn orange accent. Wide airy display, menu board as signature. */
+:root{--display:"Tenor Sans","Segoe UI",sans-serif;--body:"Commissioner","Segoe UI",Roboto,sans-serif;--mono:"Fira Code",ui-monospace,Menlo,monospace;--dw:400;--dls:.01em;--dtt:none;--r:12px;--h1:clamp(2.4rem,6vw,4.6rem);--h2:clamp(2rem,4.2vw,3rem);--bg:#17110C;--panel:#201811;--ink:#F1E8DC;--muted:#B3A291;--rule:#33281E;--acc:#F08A3A;--acc-text:#F39A54;--on-acc:#17110C;--band:#0F0B07;--on-band:#F1E8DC;--head-bg:#17110C;--head-ink:#F1E8DC;color-scheme:dark}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#F4EFE8;--panel:#FBF8F4;--ink:#22180F;--muted:#6B5D50;--rule:#E2D8CB;--acc:#E0782A;--acc-text:#B95A14;--on-acc:#1A120B;--band:#22180F;--on-band:#F4EFE8;--head-bg:#F4EFE8;--head-ink:#22180F;color-scheme:light}}
+:root[data-theme="light"]{--bg:#F4EFE8;--panel:#FBF8F4;--ink:#22180F;--muted:#6B5D50;--rule:#E2D8CB;--acc:#E0782A;--acc-text:#B95A14;--on-acc:#1A120B;--band:#22180F;--on-band:#F4EFE8;--head-bg:#F4EFE8;--head-ink:#22180F;color-scheme:light}
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.62 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head-bg)}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.04;letter-spacing:var(--dls);margin:0;text-wrap:balance;text-transform:var(--dtt)}
+.k{font:500 .76rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--head-bg);color:var(--head-ink);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:var(--dw) 1.25rem/1 var(--display);text-transform:var(--dtt);letter-spacing:var(--dls)}
+.logo small{display:block;font:400 .72rem var(--mono);opacity:.7;margin-top:3px}
+.logo .m{flex:none}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:.92rem;font-weight:500;opacity:.72}
+.top nav a:hover{opacity:1}
+.tel{font:500 .95rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--on-acc);font:600 .97rem/1 var(--body);padding:14px 20px;border-radius:var(--r);text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}.top .tel{font-size:.82rem}}
+.hero{padding-block:clamp(36px,6vw,80px);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:var(--h1);margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--acc-text)}
+.hero .lede{font-size:1.14rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{font:400 .8rem var(--mono);border:1px solid var(--rule);background:var(--panel);padding:5px 10px;border-radius:999px}
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px 48px;align-items:end;margin-bottom:34px}
+@media (max-width:800px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:var(--h2)}
+.sh p{margin:0;color:var(--muted);max-width:56ch}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;border-top:2px solid var(--ink)}
+@media (max-width:900px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.groups{grid-template-columns:1fr}}
+.groups div{padding:20px 0 22px;border-bottom:1px solid var(--rule)}
+.groups h3{font-size:1.3rem;margin-bottom:8px}
+.groups ul{list-style:none;margin:0;padding:0;color:var(--muted);font-size:.97rem}
+.groups li{padding:2px 0}
+.price{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 48px;align-items:start}
+@media (max-width:800px){.price{grid-template-columns:1fr}}
+.price h3{font-size:1.6rem}
+.price .pl{border-top:2px solid var(--ink)}
+.pi{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.pi span{min-width:0}
+.pi i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px);min-width:12px}
+.pi b{font:500 .98rem var(--mono);white-space:nowrap}
+.pnote{font:400 .8rem var(--mono);color:var(--muted);margin:10px 0 0}
+.band{background:var(--band);color:var(--on-band)}
+.band .k{color:color-mix(in srgb,var(--on-band) 62%,transparent)}
+.band .sh p{color:color-mix(in srgb,var(--on-band) 72%,transparent)}
+.ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.ppl div{border-top:3px solid var(--acc);padding-top:14px}
+.ppl b{display:block;font:var(--dw) 1.5rem/1.1 var(--display);text-transform:var(--dtt)}
+.ppl span{display:block;font:400 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin:6px 0 10px}
+.ppl p{margin:0;opacity:.85;font-size:.97rem}
+.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rv{grid-template-columns:1fr}}
+.rv figure{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px}
+.rv blockquote{margin:0;font-size:1.03rem}
+.rv figcaption{margin-top:auto;font:400 .78rem var(--mono);color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font:var(--dw) 3rem/1 var(--display);color:var(--acc-text)}
+.score span{font:400 .8rem var(--mono);color:var(--muted)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--acc)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--bg);padding:8px 13px;border-radius:999px;font:500 .92rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.pick input:focus-visible+label{outline:3px solid var(--acc);outline-offset:2px}
+.facts{border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .7rem var(--mono);padding:3px 7px;border-radius:4px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .78rem var(--mono);color:var(--muted)}
+
+.clock{background:var(--panel);border:1px solid var(--rule);border-radius:20px;padding:26px}
+.hrs{display:flex;align-items:center;gap:14px;margin:10px 0 18px}
+.hrs b{font:400 2.6rem/1 var(--display)}
+.hrs i{flex:1;height:2px;background:linear-gradient(90deg,var(--acc),transparent)}
+.clock ul{list-style:none;margin:0;padding:0}
+.clock li{padding:9px 0;border-top:1px solid var(--rule);color:var(--muted)}
+.clock .cr{display:flex;align-items:center;gap:14px;margin-top:16px}
+.clock .cr b{font:400 2.6rem/1 var(--display);color:var(--acc-text)}
+.clock .cr span{font-size:.85rem;color:var(--muted)}
+.bd{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;background:var(--band);color:var(--on-band);border-radius:22px;padding:clamp(24px,4vw,44px)}
+@media (max-width:860px){.bd{grid-template-columns:1fr}}
+.bd .k{color:var(--acc-text);margin-bottom:10px}
+.ln{display:flex;align-items:baseline;gap:10px;padding:10px 0;border-bottom:1px solid color-mix(in srgb,var(--on-band) 14%,transparent)}
+.ln span{flex:0 1 auto;min-width:0}
+.ln i{flex:1;min-width:10px;border-bottom:1px dotted color-mix(in srgb,var(--on-band) 30%,transparent)}
+.ln b{flex:none;font:500 .98rem var(--mono)}
+.bn{font:400 .8rem var(--mono);color:var(--muted);margin:12px 0 0}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="m" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15.5" fill="none" stroke="var(--acc)" stroke-width="2"/><path d="M17 8v9l6 4" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round"/></svg><span><b>В моменте</b><small>кофейня · Софьи Перовской, 37</small></span></a>
+    <nav aria-label="Разделы"><a href="#services">Меню</a><a href="#people">Люди</a><a href="#reviews">Отзывы</a><a href="#contact">Бронь</a></nav>
+    <a class="tel num" href="tel:+79051117137">+7 905 111-71-37</a>
+    <a class="btn" href="#contact">Столик</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · ул. Софьи Перовской, 37 · у Белоусовского парка</p>
+        <h1>Кофе, ради которого <em>стоит задержаться.</em></h1>
+        <p class="lede">Маленькая кофейня на семь столиков. Классика и авторские напитки, сырники и домашние десерты, настольные игры, терраса летом и тёплая веранда зимой. С собакой тоже можно.</p>
+        <div class="cta"><a class="btn" href="#contact">Забронировать столик</a><a class="btn out num" href="tel:+79051117137">+7 905 111-71-37</a></div>
+        <div class="chips"><span>Авторские напитки</span><span>Настолки</span><span>Терраса и веранда</span><span>Можно с собакой</span></div>
+      </div>
+      <aside class="clock"><p class="k">Сегодня</p><div class="hrs num"><b>9:00</b><i></i><b>21:00</b></div>
+  <ul><li>Wi‑Fi и розетки</li><li>Приглушённый свет, спокойная музыка</li><li>Кофе с собой</li></ul>
+  <div class="cr"><b class="num">5,0</b><span>80 оценок · 72 отзыва<br>атмосферу хвалят 100% гостей</span></div></aside>
+    </div>
+  </section>
+  <section class="board" style="padding-top:0"><div class="wrap"><div class="bd">
+  <div class="col"><p class="k">Классика</p><div class="ln"><span>Американо, 150 мл</span><i></i><b class="num">180</b></div><div class="ln"><span>Капучино, 300 мл</span><i></i><b class="num">280</b></div><div class="ln"><span>Раф ванильный, 400 мл</span><i></i><b class="num">350</b></div><div class="ln"><span>Детское какао</span></div></div>
+  <div class="col"><p class="k">Только у нас</p><div class="ln"><span>«Тайга», авторский</span></div><div class="ln"><span>Бамбл</span></div><div class="ln"><span>Облепиховый «не чай»</span></div><div class="ln"><span>Сезонное меню</span></div></div>
+  <div class="col"><p class="k">К кофе</p><div class="ln"><span>Сырники</span></div><div class="ln"><span>Круассан с фисташковым кремом</span></div><div class="ln"><span>Медовик</span></div><div class="ln"><span>Наполеон</span></div></div>
+ </div><p class="bn">Цены в рублях. Авторские напитки и десерты меняются, спросите у бариста, что сегодня.</p></div></section>
+  <section id="services">
+    <div class="wrap">
+      <div class="sh"><h2>Чем живём</h2><p>Кофе готовят бариста, которые знают своё дело. Десерты домашние, меню меняется по сезону.</p></div>
+      <div class="groups"><div><h3>Кофе</h3><ul><li>Эспрессо, американо</li><li>Капучино, флэт уайт</li><li>Рафы</li><li>Кофе с собой</li></ul></div><div><h3>Авторское</h3><ul><li>«Тайга»</li><li>Бамблы</li><li>Облепиховый «не чай»</li></ul></div><div><h3>Еда</h3><ul><li>Сырники</li><li>Круассаны</li><li>Медовик, Наполеон, торты</li></ul></div><div><h3>Особое меню</h3><ul><li>ПП и диетические позиции</li><li>Сезонное меню</li><li>Какао для детей</li></ul></div><div><h3>Чтобы остаться</h3><ul><li>Настольные игры</li><li>Wi‑Fi и зарядка</li><li>Летняя терраса, зимняя веранда</li></ul></div><div><h3>Можно</h3><ul><li>С собакой до 35 см в холке</li><li>Деловая встреча</li><li>Бронь столика заранее</li></ul></div></div>
+      <div class="price"><div><h3>Цены</h3><p class="pnote">Цены из карточки на Яндекс Картах. Актуальные уточняйте по телефону.</p></div><div class="pl num"><div class="pi"><span>Американо, 150 мл</span><i></i><b>180 ₽</b></div><div class="pi"><span>Капучино, 300 мл</span><i></i><b>280 ₽</b></div><div class="pi"><span>Раф ванильный, 400 мл</span><i></i><b>350 ₽</b></div></div></div>
+    </div>
+  </section>
+  <section id="people" class="band">
+    <div class="wrap">
+      <div class="sh"><h2>Люди</h2><p>Их по именам вспоминают гости в отзывах.</p></div>
+      <div class="ppl"><div><b>Николай</b><span>хозяин</span><p>«Хозяин кофейни Николай очень трепетно относится к своему заведению».</p></div><div><b>Валерия</b><span>бариста</span><p>«Хочется отметить работу бариста Валерии».</p></div><div><b>Гости</b><span>постоянные</span><p>«Всегда приятно удивляет качество кофе: специалисты действительно знают своё дело!»</p></div></div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sh"><h2>Отзывы</h2><div class="score"><b class="num">5,0</b><span>80 оценок · 72 отзыва<br>Яндекс Карты</span></div></div>
+      <div class="rv"><figure><blockquote>«Десерты — отдельная любовь. Честно, вкуснее я не ела нигде»</blockquote><figcaption>Марина Морозова · декабрь 2025</figcaption></figure><figure><blockquote>«Всегда приятно удивляет качество кофе — специалисты действительно знают своё дело!»</blockquote><figcaption>Лера О. · Яндекс Карты</figcaption></figure><figure><blockquote>«Кофе чуть дороже, чем во многих других кофейнях, но очень вкусный»</blockquote><figcaption>Жанна · Яндекс Карты</figcaption></figure></div>
+      <p style="margin-top:22px"><a class="k" href="https://yandex.ru/maps/org/v_momente/57997590903/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах ↗</a></p>
+    </div>
+  </section>
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Бронь</p>
+        <h2>Столик или заказ с собой</h2>
+        <p>Заполните форму, и откроется WhatsApp с готовым сообщением. Подтвердим бронь в ответ.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="c">Когда придёте</label><input id="c" placeholder="Например, сегодня в 19:00"></div>
+        </div>
+        <fieldset class="f"><legend>Что нужно</legend><div class="pick"><input type="radio" name="w" id="x0" value="забронировать столик" checked><label for="x0">Забронировать столик</label><input type="radio" name="w" id="x1" value="заказать кофе с собой"><label for="x1">Кофе с собой</label><input type="radio" name="w" id="x2" value="заказать десерт"><label for="x2">Десерт к празднику</label><input type="radio" name="w" id="x3" value="забронировать стол для встречи"><label for="x3">Деловая встреча</label></div></fieldset>
+        <div class="f"><label for="t">Комментарий</label><textarea id="t" placeholder="Сколько гостей, с собакой или без"></textarea></div>
+        <div class="cta"><a class="btn" id="wa" data-n="79051117137" href="https://wa.me/79051117137" target="_blank" rel="noopener">Открыть WhatsApp</a><a class="btn out" href="https://t.me/vmomente_tula" target="_blank" rel="noopener">Telegram</a></div>
+      </form>
+      <div>
+        <p class="k">Контакты</p>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin:10px 0 22px">Софьи Перовской, 37</h2>
+        <div class="facts num">
+          <div><span>Телефон</span><span><span id="tel">+7 905 111-71-37</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Адрес</span><span>Тула, ул. Софьи Перовской, 37</span></div><div><span>Ориентир</span><span>10 минут пешком от Белоусовского парка</span></div><div><span>Режим</span><span>9:00–21:00</span></div><div><span>Оплата</span><span>карта, наличные, QR</span></div><div><span>Telegram</span><span><a href="https://t.me/vmomente_tula" target="_blank" rel="noopener">@vmomente_tula ↗</a></span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/v_momente/57997590903/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© В моменте, Тула</span><span>Демо‑версия сайта</span></div></footer>
+<script>
+(function(){
+  var form=document.getElementById("form"),wa=document.getElementById("wa");
+  function upd(){
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    var car=document.getElementById("c").value.trim(),t=document.getElementById("t").value.trim(),n=document.getElementById("n").value.trim();
+    wa.href="https://wa.me/"+wa.dataset.n+"?text="+encodeURIComponent("Здравствуйте! Хочу "+w+"."+(car?"\nВремя: "+car+".":"")+(t?"\n"+t:"")+(n?"\n"+n:""));
+  }
+  form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault();});upd();
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>
