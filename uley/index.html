@@ -147,7 +147,7 @@ form.card{padding:clamp(20px,3vw,32px);display:grid;gap:22px}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 @media (max-width:520px){.two{grid-template-columns:1fr}}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips{position:relative}.chips input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
 .chips label{cursor:pointer;border:1px solid var(--line);padding:8px 12px;font-size:.88rem;border-radius:2px;user-select:none}
 .chips input:checked+label{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .chips input:focus-visible+label{outline:2px solid var(--amber);outline-offset:2px}
