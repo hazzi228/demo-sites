@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Цветки‑Лепестки на Ленина</title>
+<meta name="description" content="Цветочный магазин «Цветки-Лепестки» в Туле, проспект Ленина 30. Букеты от 1 900 ₽, композиции, свадебная флористика, шары, доставка.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap">
+<style>
+/* Florist's workroom: blush paper, eucalyptus green, a high-contrast display serif. Signature is a bouquet catalogue with soft CSS-painted blooms. */
+:root{--display:"Prata",Georgia,serif;--body:"Inter","Segoe UI",Roboto,sans-serif;--mono:"Roboto Mono",ui-monospace,Menlo,monospace;--dw:400;--dls:-.01em;--dtt:none;--r:20px;--h1:clamp(2.4rem,6vw,4.6rem);--h2:clamp(2rem,4.2vw,3.1rem);--bg:#FBF5F3;--panel:#FFFFFF;--ink:#24302A;--muted:#66706A;--rule:#EEDFDB;--acc:#3F6B55;--acc-text:#3F6B55;--on-acc:#FFFFFF;--band:#2F5242;--on-band:#F4EFEA;--head-bg:#FBF5F3;--head-ink:#24302A}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121815;--panel:#19211D;--ink:#EEF0EC;--muted:#A7B0AA;--rule:#2A3530;--acc:#8CC4A6;--acc-text:#9AD0B3;--on-acc:#0E1512;--band:#1C2C24;--on-band:#EEF0EC;--head-bg:#121815;--head-ink:#EEF0EC;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121815;--panel:#19211D;--ink:#EEF0EC;--muted:#A7B0AA;--rule:#2A3530;--acc:#8CC4A6;--acc-text:#9AD0B3;--on-acc:#0E1512;--band:#1C2C24;--on-band:#EEF0EC;--head-bg:#121815;--head-ink:#EEF0EC;color-scheme:dark}
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.62 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head-bg)}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.04;letter-spacing:var(--dls);margin:0;text-wrap:balance;text-transform:var(--dtt)}
+.k{font:500 .76rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--head-bg);color:var(--head-ink);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:var(--dw) 1.25rem/1 var(--display);text-transform:var(--dtt);letter-spacing:var(--dls)}
+.logo small{display:block;font:400 .72rem var(--mono);opacity:.7;margin-top:3px}
+.logo .m{flex:none}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:.92rem;font-weight:500;opacity:.72}
+.top nav a:hover{opacity:1}
+.tel{font:500 .95rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--on-acc);font:600 .97rem/1 var(--body);padding:14px 20px;border-radius:var(--r);text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}.top .tel{font-size:.82rem}}
+.hero{padding-block:clamp(36px,6vw,80px);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:var(--h1);margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--acc-text)}
+.hero .lede{font-size:1.14rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{font:400 .8rem var(--mono);border:1px solid var(--rule);background:var(--panel);padding:5px 10px;border-radius:999px}
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px 48px;align-items:end;margin-bottom:34px}
+@media (max-width:800px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:var(--h2)}
+.sh p{margin:0;color:var(--muted);max-width:56ch}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;border-top:2px solid var(--ink)}
+@media (max-width:900px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.groups{grid-template-columns:1fr}}
+.groups div{padding:20px 0 22px;border-bottom:1px solid var(--rule)}
+.groups h3{font-size:1.3rem;margin-bottom:8px}
+.groups ul{list-style:none;margin:0;padding:0;color:var(--muted);font-size:.97rem}
+.groups li{padding:2px 0}
+.price{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 48px;align-items:start}
+@media (max-width:800px){.price{grid-template-columns:1fr}}
+.price h3{font-size:1.6rem}
+.price .pl{border-top:2px solid var(--ink)}
+.pi{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.pi span{min-width:0}
+.pi i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px);min-width:12px}
+.pi b{font:500 .98rem var(--mono);white-space:nowrap}
+.pnote{font:400 .8rem var(--mono);color:var(--muted);margin:10px 0 0}
+.band{background:var(--band);color:var(--on-band)}
+.band .k{color:color-mix(in srgb,var(--on-band) 62%,transparent)}
+.band .sh p{color:color-mix(in srgb,var(--on-band) 72%,transparent)}
+.ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.ppl div{border-top:3px solid var(--acc);padding-top:14px}
+.ppl b{display:block;font:var(--dw) 1.5rem/1.1 var(--display);text-transform:var(--dtt)}
+.ppl span{display:block;font:400 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin:6px 0 10px}
+.ppl p{margin:0;opacity:.85;font-size:.97rem}
+.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rv{grid-template-columns:1fr}}
+.rv figure{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px}
+.rv blockquote{margin:0;font-size:1.03rem}
+.rv figcaption{margin-top:auto;font:400 .78rem var(--mono);color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font:var(--dw) 3rem/1 var(--display);color:var(--acc-text)}
+.score span{font:400 .8rem var(--mono);color:var(--muted)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--acc)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--bg);padding:8px 13px;border-radius:999px;font:500 .92rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.pick input:focus-visible+label{outline:3px solid var(--acc);outline-offset:2px}
+.facts{border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .7rem var(--mono);padding:3px 7px;border-radius:4px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .78rem var(--mono);color:var(--muted)}
+
+.note{background:var(--panel);border-radius:28px;padding:30px;border:1px solid var(--rule);position:relative}
+.note::after{content:"";position:absolute;right:-8px;top:-12px;width:70px;height:70px;border-radius:50%;background:radial-gradient(circle at 50% 50%,#3F6B55 0 14%,transparent 15%),conic-gradient(from 0deg,#F2B8C6,#E8A0AE,#F5C6CF,#F2B8C6,#E8A0AE,#F5C6CF,#F2B8C6);-webkit-mask:radial-gradient(circle,#000 62%,transparent 64%);mask:radial-gradient(circle,#000 62%,transparent 64%)}
+.nq{font:400 1.35rem/1.4 var(--display);margin:14px 0 8px;padding-right:40px}
+.na{margin:0;font-size:.86rem;color:var(--muted)}
+.nr{display:flex;align-items:center;gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid var(--rule)}
+.nr b{font:400 2.8rem/1 var(--display);color:var(--acc-text)}
+.nr span{font-size:.86rem;color:var(--muted)}
+.hero{overflow-x:clip}
+.bqs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.bqs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.bqs article{background:var(--panel);border:1px solid var(--rule);border-radius:22px;padding:14px 14px 16px;display:flex;flex-direction:column}
+.fl{position:relative;aspect-ratio:1;border-radius:16px;background:linear-gradient(180deg,#F7EEEB,#EFE2DD);overflow:hidden;margin-bottom:12px}
+.fl::after{content:"";position:absolute;left:50%;bottom:-8%;width:34%;height:34%;transform:translateX(-50%);background:linear-gradient(90deg,#8FAF98,#6E9580);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%)}
+.fl i{position:absolute;width:30%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--c2) 70%,#000 10%) 0 14%,var(--c1) 16% 62%,var(--c2) 64%);box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.fl i:nth-child(1){left:20%;top:22%}.fl i:nth-child(2){left:46%;top:16%;background:radial-gradient(circle,var(--c2) 0 50%,var(--c1) 52%)}.fl i:nth-child(3){left:34%;top:40%}
+.fl i:nth-child(4){left:12%;top:44%;width:22%;background:#9DB8A4;border-radius:50% 0}.fl i:nth-child(5){left:62%;top:40%;width:24%;background:radial-gradient(circle,var(--c1) 0 40%,var(--c2) 42%)}
+.bqs h3{font-size:1.05rem;line-height:1.25;margin-bottom:8px}
+.bqs b{margin-top:auto;font:500 1rem var(--mono);color:var(--acc-text)}
+.btn{border-radius:999px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="m" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><g transform="translate(17 15)"><ellipse rx="5" ry="9" fill="#F2B8C6" transform="rotate(0)"/><ellipse rx="5" ry="9" fill="#E8A0AE" transform="rotate(72)"/><ellipse rx="5" ry="9" fill="#F2B8C6" transform="rotate(144)"/><ellipse rx="5" ry="9" fill="#E8A0AE" transform="rotate(216)"/><ellipse rx="5" ry="9" fill="#F5C6CF" transform="rotate(288)"/><circle r="3.4" fill="#3F6B55"/></g></svg><span><b>Цветки‑Лепестки</b><small>цветочная мастерская · Ленина, 30</small></span></a>
+    <nav aria-label="Разделы"><a href="#services">Букеты</a><a href="#people">Флористы</a><a href="#reviews">Отзывы</a><a href="#contact">Заказ</a></nav>
+    <a class="tel num" href="tel:+79300640094">+7 930 064-00-94</a>
+    <a class="btn" href="#contact">Заказать букет</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · проспект Ленина, 30 · остановка «Каминского»</p>
+        <h1>Букет, который <em>стоит неделю.</em></h1>
+        <p class="lede">Свежие цветы, авторские букеты и композиции на любой повод: от первоклассника до свадьбы. Шары с гелием, открытки, игрушки. Соберём при вас или привезём по Туле.</p>
+        <div class="cta"><a class="btn" href="#contact">Заказать букет</a><a class="btn out num" href="tel:+79300640094">+7 930 064-00-94</a></div>
+        <div class="chips"><span>Доставка по Туле</span><span>Свадебная флористика</span><span>Шары с гелием</span><span>Сухоцветы и стабилизированные цветы</span></div>
+      </div>
+      <aside class="note"><span class="k">Заметка флориста</span><p class="nq">«Подбирали букет для первоклассника, хотелось яркий и праздничный, но не перегруженный вариант».</p><p class="na">Анна В. · Яндекс Карты</p>
+  <div class="nr"><b class="num">5,0</b><span>311 оценок · 292 отзыва<br>«Хорошее место 2026»</span></div></aside>
+    </div>
+  </section>
+  <section class="cat" id="bouquets" style="padding-top:0"><div class="wrap"><div class="sh"><h2>Букеты и цены</h2><p>Двенадцать букетов из витрины. Любой соберём в другом цвете или размере, скажите бюджет.</p></div><div class="bqs"><article><div class="fl" style="--c1:#F4F1E6;--c2:#F2C94C" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Букет из ромашек‑хризантем</h3><b class="num">1 900 ₽</b></article><article><div class="fl" style="--c1:#F2B8C6;--c2:#E07A93" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Букет из кустовых роз</h3><b class="num">2 780 ₽</b></article><article><div class="fl" style="--c1:#E9C6E8;--c2:#C77DBA" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Розы, диантусы и маттиола</h3><b class="num">2 800 ₽</b></article><article><div class="fl" style="--c1:#FFFDF8;--c2:#EDE6D6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Букет нежно‑белый</h3><b class="num">2 990 ₽</b></article><article><div class="fl" style="--c1:#F5C6CF;--c2:#9DB8A4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>7 французских роз с эвкалиптом</h3><b class="num">3 290 ₽</b></article><article><div class="fl" style="--c1:#C9D6F2;--c2:#EAD6F0" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Гортензии и эустома</h3><b class="num">3 560 ₽</b></article><article><div class="fl" style="--c1:#D7E1F7;--c2:#F2B8C6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Гортензии, розы и диантусы</h3><b class="num">3 850 ₽</b></article><article><div class="fl" style="--c1:#E8A0AE;--c2:#9DB8A4" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Розы и эвкалипт</h3><b class="num">3 870 ₽</b></article><article><div class="fl" style="--c1:#FFF3E8;--c2:#F29BAE" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Лилии и розы</h3><b class="num">3 900 ₽</b></article><article><div class="fl" style="--c1:#E7D9F5;--c2:#FFFFFF" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Букет из эустом</h3><b class="num">4 250 ₽</b></article><article><div class="fl" style="--c1:#F5D0D8;--c2:#C9D6F2" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Композиция из роз и гортензий</h3><b class="num">4 990 ₽</b></article><article><div class="fl" style="--c1:#B5223B;--c2:#F5C6CF" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Букет «Элит»</h3><b class="num">6 990 ₽</b></article></div></div></section>
+  <section id="services">
+    <div class="wrap">
+      <div class="sh"><h2>Что ещё делаем</h2><p>Цветы, подарки и оформление. Можно оплатить заранее и забрать готовый букет.</p></div>
+      <div class="groups"><div><h3>Букеты</h3><ul><li>Авторские букеты</li><li>Монобукеты из роз</li><li>Букеты на 1 сентября и выпускной</li></ul></div><div><h3>Композиции</h3><ul><li>В коробках и корзинах</li><li>Цветы в колбе</li><li>Флорариумы</li></ul></div><div><h3>Свадьба</h3><ul><li>Букет невесты</li><li>Бутоньерки</li><li>Оформление</li></ul></div><div><h3>Долгоиграющие</h3><ul><li>Сухоцветы</li><li>Стабилизированные цветы</li><li>Стабилизированный мох</li></ul></div><div><h3>К букету</h3><ul><li>Шары с гелием</li><li>Мягкие игрушки</li><li>Открытки и упаковка</li></ul></div><div><h3>Удобно</h3><ul><li>Доставка</li><li>Предзаказ</li><li>Подарочные сертификаты, бонусы</li></ul></div></div>
+      <div class="price"><div><h3>Ещё</h3><p class="pnote">Цены из карточки на Яндекс Картах. Состав меняется по сезону, флорист подберёт замену.</p></div><div class="pl num"><div class="pi"><span>Набор шаров «Чемпион»</span><i></i><b>2 890 ₽</b></div><div class="pi"><span>Букет из ромашек‑хризантем</span><i></i><b>1 900 ₽</b></div><div class="pi"><span>Букет «Элит»</span><i></i><b>6 990 ₽</b></div></div></div>
+    </div>
+  </section>
+  <section id="people" class="band">
+    <div class="wrap">
+      <div class="sh"><h2>Флористы</h2><p>Их по именам благодарят в отзывах.</p></div>
+      <div class="ppl"><div><b>Евгения</b><span>флорист</span><p>«Собрала просто невероятно милую композицию, учла все пожелания».</p></div><div><b>Анна</b><span>флорист</span><p>Соберёт букет при вас, пока выбираете открытку.</p></div><div><b>Маргарита и Софья</b><span>флористы</span><p>Примут заказ на завтра и организуют доставку по Туле.</p></div></div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sh"><h2>Отзывы</h2><div class="score"><b class="num">5,0</b><span>311 оценок · 292 отзыва<br>Яндекс Карты</span></div></div>
+      <div class="rv"><figure><blockquote>«Флористы очень вежливые, грамотно подбирают и слушают все предпочтения, букеты красивые и стоят долго»</blockquote><figcaption>Кира А. · Яндекс Карты</figcaption></figure><figure><blockquote>«Девочки посоветовали свежайшие розочки, подготовили всё очень быстро. Букет простоял неделю»</blockquote><figcaption>Анастасия Боровенская · Яндекс Карты</figcaption></figure><figure><blockquote>«Флористы — настоящие мастера своего дела, собрали невероятно красивый и стильный букет»</blockquote><figcaption>Александр К. · Яндекс Карты</figcaption></figure></div>
+      <p style="margin-top:22px"><a class="k" href="https://yandex.ru/maps/org/tsvetki_lepestki/7555911302/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах ↗</a></p>
+    </div>
+  </section>
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Заказ</p>
+        <h2>Заказать букет</h2>
+        <p>Заполните форму, и откроется WhatsApp с готовым сообщением флористу.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="c">Когда нужен</label><input id="c" placeholder="Например, завтра к 10:00"></div>
+        </div>
+        <fieldset class="f"><legend>Что нужно</legend><div class="pick"><input type="radio" name="w" id="x0" value="букет" checked><label for="x0">Букет</label><input type="radio" name="w" id="x1" value="букет из роз"><label for="x1">Розы</label><input type="radio" name="w" id="x2" value="композицию"><label for="x2">Композиция</label><input type="radio" name="w" id="x3" value="свадебный букет"><label for="x3">Свадьба</label><input type="radio" name="w" id="x4" value="шары с гелием"><label for="x4">Шары</label><input type="radio" name="w" id="x5" value="букет с доставкой"><label for="x5">С доставкой</label></div></fieldset>
+        <div class="f"><label for="t">Пожелания</label><textarea id="t" placeholder="Повод, цвета, бюджет, адрес доставки, текст открытки"></textarea></div>
+        <div class="cta"><a class="btn" id="wa" data-n="79300640094" href="https://wa.me/79300640094" target="_blank" rel="noopener">Открыть WhatsApp</a><a class="btn out" href="https://vk.ru/tsvetkilepestki" target="_blank" rel="noopener">ВКонтакте</a></div>
+      </form>
+      <div>
+        <p class="k">Контакты</p>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin:10px 0 22px">Проспект Ленина, 30</h2>
+        <div class="facts num">
+          <div><span>Телефон</span><span><span id="tel">+7 930 064-00-94</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Адрес</span><span>Тула, проспект Ленина, 30</span></div><div><span>Ориентир</span><span>остановка «Улица Каминского», 120 м</span></div><div><span>Режим</span><span>сегодня до 21:00</span></div><div><span>Оплата</span><span>карта, наличные, СБП, перевод</span></div><div><span>Соцсети</span><span><a href="https://vk.ru/tsvetkilepestki" target="_blank" rel="noopener">ВКонтакте ↗</a></span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/tsvetki_lepestki/7555911302/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© Цветки‑Лепестки, Тула</span><span>Демо‑версия сайта</span></div></footer>
+<script>
+(function(){
+  var form=document.getElementById("form"),wa=document.getElementById("wa");
+  function upd(){
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    var car=document.getElementById("c").value.trim(),t=document.getElementById("t").value.trim(),n=document.getElementById("n").value.trim();
+    wa.href="https://wa.me/"+wa.dataset.n+"?text="+encodeURIComponent("Здравствуйте! Хочу заказать: "+w+"."+(car?"\nКогда: "+car+".":"")+(t?"\n"+t:"")+(n?"\n"+n:""));
+  }
+  form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault();});upd();
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>

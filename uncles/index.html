@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Барбершоп Uncles на Ленина</title>
+<meta name="description" content="Барбершоп Uncles в Туле, проспект Ленина 26. Мужские и детские стрижки, борода, бритьё. Рейтинг 5,0. Ковёр на стене, кофе и своя парковка.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Roboto+Condensed:wght@400;500;700&family=PT+Mono&display=swap">
+<style>
+/* Uncle's flat in the 90s: a wool carpet on the wall, deep burgundy and mustard, warm lamp light. Retro Soviet display type. Signature is a two-master price table. */
+:root{--display:"Ruslan Display","Georgia",serif;--body:"Roboto Condensed","Arial Narrow",sans-serif;--mono:"PT Mono",ui-monospace,Menlo,monospace;--dw:400;--dls:.02em;--dtt:uppercase;--r:4px;--h1:clamp(2.3rem,5.8vw,4.4rem);--h2:clamp(1.9rem,4vw,3rem);--bg:#1A0E0D;--panel:#241413;--ink:#F3E5C8;--muted:#C0A890;--rule:#3D2420;--acc:#D9A23B;--acc-text:#E2B04E;--on-acc:#1A0E0D;--band:#2B1112;--on-band:#F3E5C8;--head-bg:#120908;--head-ink:#F3E5C8;color-scheme:dark}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#F3EBDD;--panel:#FAF4EA;--ink:#2A1612;--muted:#6E5A4E;--rule:#E0D2BD;--acc:#7E1F23;--acc-text:#8E2328;--on-acc:#F7E9C8;--band:#3A1416;--on-band:#F3E5C8;--head-bg:#2A1612;--head-ink:#F3E5C8;color-scheme:light}}
+:root[data-theme="light"]{--bg:#F3EBDD;--panel:#FAF4EA;--ink:#2A1612;--muted:#6E5A4E;--rule:#E0D2BD;--acc:#7E1F23;--acc-text:#8E2328;--on-acc:#F7E9C8;--band:#3A1416;--on-band:#F3E5C8;--head-bg:#2A1612;--head-ink:#F3E5C8;color-scheme:light}
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.62 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head-bg)}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.04;letter-spacing:var(--dls);margin:0;text-wrap:balance;text-transform:var(--dtt)}
+.k{font:500 .76rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--head-bg);color:var(--head-ink);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:var(--dw) 1.25rem/1 var(--display);text-transform:var(--dtt);letter-spacing:var(--dls)}
+.logo small{display:block;font:400 .72rem var(--mono);opacity:.7;margin-top:3px}
+.logo .m{flex:none}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:.92rem;font-weight:500;opacity:.72}
+.top nav a:hover{opacity:1}
+.tel{font:500 .95rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--on-acc);font:600 .97rem/1 var(--body);padding:14px 20px;border-radius:var(--r);text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}.top .tel{font-size:.82rem}}
+.hero{padding-block:clamp(36px,6vw,80px);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:var(--h1);margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--acc-text)}
+.hero .lede{font-size:1.14rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{font:400 .8rem var(--mono);border:1px solid var(--rule);background:var(--panel);padding:5px 10px;border-radius:999px}
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px 48px;align-items:end;margin-bottom:34px}
+@media (max-width:800px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:var(--h2)}
+.sh p{margin:0;color:var(--muted);max-width:56ch}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;border-top:2px solid var(--ink)}
+@media (max-width:900px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.groups{grid-template-columns:1fr}}
+.groups div{padding:20px 0 22px;border-bottom:1px solid var(--rule)}
+.groups h3{font-size:1.3rem;margin-bottom:8px}
+.groups ul{list-style:none;margin:0;padding:0;color:var(--muted);font-size:.97rem}
+.groups li{padding:2px 0}
+.price{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 48px;align-items:start}
+@media (max-width:800px){.price{grid-template-columns:1fr}}
+.price h3{font-size:1.6rem}
+.price .pl{border-top:2px solid var(--ink)}
+.pi{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.pi span{min-width:0}
+.pi i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px);min-width:12px}
+.pi b{font:500 .98rem var(--mono);white-space:nowrap}
+.pnote{font:400 .8rem var(--mono);color:var(--muted);margin:10px 0 0}
+.band{background:var(--band);color:var(--on-band)}
+.band .k{color:color-mix(in srgb,var(--on-band) 62%,transparent)}
+.band .sh p{color:color-mix(in srgb,var(--on-band) 72%,transparent)}
+.ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.ppl div{border-top:3px solid var(--acc);padding-top:14px}
+.ppl b{display:block;font:var(--dw) 1.5rem/1.1 var(--display);text-transform:var(--dtt)}
+.ppl span{display:block;font:400 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin:6px 0 10px}
+.ppl p{margin:0;opacity:.85;font-size:.97rem}
+.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rv{grid-template-columns:1fr}}
+.rv figure{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px}
+.rv blockquote{margin:0;font-size:1.03rem}
+.rv figcaption{margin-top:auto;font:400 .78rem var(--mono);color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font:var(--dw) 3rem/1 var(--display);color:var(--acc-text)}
+.score span{font:400 .8rem var(--mono);color:var(--muted)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--acc)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--bg);padding:8px 13px;border-radius:999px;font:500 .92rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.pick input:focus-visible+label{outline:3px solid var(--acc);outline-offset:2px}
+.facts{border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .7rem var(--mono);padding:3px 7px;border-radius:4px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .78rem var(--mono);color:var(--muted)}
+
+.carpet{padding:18px;border-radius:6px;background:
+ radial-gradient(circle at 50% 50%,#D9A23B 0 6%,transparent 7%) 0 0/48px 48px,
+ conic-gradient(from 45deg at 50% 50%,#7E1F23 0 25%,#5A1418 0 50%,#7E1F23 0 75%,#5A1418 0) 0 0/48px 48px;
+ box-shadow:inset 0 0 0 6px #D9A23B,inset 0 0 0 10px #3A1416;position:relative}
+.cin{background:#2A1612;color:#F3E5C8;padding:26px;border-radius:2px;text-align:center;box-shadow:0 0 0 2px #D9A23B}
+.cin .k{color:#D9A23B}
+.cin b{display:block;font:400 4rem/1 var(--display);color:#E2B04E;margin:12px 0 4px}
+.cs{font:400 .82rem var(--mono);opacity:.8}
+.cin p{margin:16px 0 8px;font-size:1.05rem;line-height:1.45}
+.ca{font:400 .78rem var(--mono);opacity:.7}
+.tbl{border-top:3px double var(--ink)}
+.tr{display:grid;grid-template-columns:minmax(0,1fr) 7.5rem 7.5rem;gap:12px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--rule)}
+@media (max-width:520px){.tr{grid-template-columns:minmax(0,1fr) 5.4rem 5.4rem;gap:8px}}
+.tr span{font-size:1.08rem;min-width:0}
+.tr b{text-align:right;font:400 1.05rem var(--mono);white-space:nowrap}
+.tr b:nth-child(2){color:var(--acc-text)}
+.th span{font:400 .78rem var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);text-align:right}
+.th span:first-child{text-align:left}
+.top .logo b{letter-spacing:.14em}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="m" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="4" fill="#7E1F23"/><path d="M17 4l13 13-13 13L4 17z" fill="none" stroke="#D9A23B" stroke-width="2"/><path d="M17 11l6 6-6 6-6-6z" fill="#D9A23B"/></svg><span><b>UNCLES</b><small>барбершоп · Ленина, 26</small></span></a>
+    <nav aria-label="Разделы"><a href="#services">Цены</a><a href="#people">Мастера</a><a href="#reviews">Отзывы</a><a href="#contact">Запись</a></nav>
+    <a class="tel num" href="tel:+79606185909">+7 960 618-59-09</a>
+    <a class="btn" href="#contact">Записаться</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · проспект Ленина, 26 · у остановки «Каминского»</p>
+        <h1>Стрижка как у дяди <em>в гостях.</em></h1>
+        <p class="lede">Мужские и детские стрижки, борода, стрижка под машинку. Ковёр на стене, кофе, разговор по делу и консультация по уходу. Рядом своя парковка.</p>
+        <div class="cta"><a class="btn" href="#contact">Записаться</a><a class="btn out num" href="tel:+79606185909">+7 960 618-59-09</a></div>
+        <div class="chips"><span>Кофе пока стрижём</span><span>Своя парковка</span><span>Детские стрижки</span><span>Можно с собакой</span></div>
+      </div>
+      <aside class="carpet" aria-hidden="false"><div class="cin"><span class="k">Сегодня до 20:00</span><b class="num">5,0</b><span class="cs">175 оценок · 150 отзывов</span><p>«Ковёр на стене создаёт ощущение тепла и уюта, как будто находишься в гостях у хорошего друга».</p><span class="ca">Дмитрий З. · Яндекс Карты</span></div></aside>
+    </div>
+  </section>
+  <section class="pt" id="prices" style="padding-top:0"><div class="wrap"><div class="sh"><h2>Цены</h2><p>У Рамазана свой прайс, чуть ниже основного. Время на услугу от 30 минут до часа.</p></div><div class="tbl num" role="table"><div class="tr th" role="row"><span role="columnheader">Услуга</span><span role="columnheader">Прайс</span><span role="columnheader">У Рамазана</span></div><div class="tr" role="row"><span role="cell">Мужская стрижка</span><b role="cell">1 700 ₽</b><b role="cell">1 400 ₽</b></div><div class="tr" role="row"><span role="cell">Стрижка + борода</span><b role="cell">2 400 ₽</b><b role="cell">1 900 ₽</b></div><div class="tr" role="row"><span role="cell">Под машинку</span><b role="cell">1 200 ₽</b><b role="cell">1 000 ₽</b></div><div class="tr" role="row"><span role="cell">Под машинку + борода</span><b role="cell">2 000 ₽</b><b role="cell">1 700 ₽</b></div><div class="tr" role="row"><span role="cell">Стрижка бороды</span><b role="cell">1 200 ₽</b><b role="cell">1 000 ₽</b></div><div class="tr" role="row"><span role="cell">Детская стрижка</span><b role="cell">1 400 ₽</b><b role="cell">1 200 ₽</b></div><div class="tr" role="row"><span role="cell">Воск: нос и уши</span><b role="cell">300 ₽</b><b role="cell">—</b></div></div></div></section>
+  <section id="services">
+    <div class="wrap">
+      <div class="sh"><h2>Что делаем</h2><p>Мужские и детские стрижки, борода и уход. Подскажем, как укладывать дома.</p></div>
+      <div class="groups"><div><h3>Стрижки</h3><ul><li>Мужская стрижка с консультацией</li><li>Под машинку</li><li>Детская стрижка</li></ul></div><div><h3>Борода</h3><ul><li>Стрижка бороды</li><li>Стрижка + борода</li><li>Под машинку + борода</li></ul></div><div><h3>Уход</h3><ul><li>Удаление волос воском</li><li>Подбор средств для укладки</li><li>Подарочные сертификаты</li></ul></div></div>
+      <div class="price"><div><h3>Уход домой</h3><p class="pnote">Косметика, которой работают мастера. Есть в наличии в барбершопе.</p></div><div class="pl num"><div class="pi"><span>Стайлинг NISHMAN: паста, глина, воск</span><i></i><b>1 800 ₽</b></div><div class="pi"><span>Крем для бритья PRORASO</span><i></i><b>1 100 ₽</b></div><div class="pi"><span>Одеколон NISHMAN</span><i></i><b>1 000 ₽</b></div><div class="pi"><span>Текстурирующий спрей TEFIA</span><i></i><b>900 ₽</b></div><div class="pi"><span>Шампунь для бороды GORODETZ</span><i></i><b>800 ₽</b></div></div></div>
+    </div>
+  </section>
+  <section id="people" class="band">
+    <div class="wrap">
+      <div class="sh"><h2>Мастера</h2><p>Гости в отзывах пишут к кому идти.</p></div>
+      <div class="ppl"><div><b>Антон</b><span>барбер</span><p>«Антоха — профессионал, который горит своим делом!»</p></div><div><b>Рамазан</b><span>барбер</span><p>«Мастер Рамазан очень крутой».</p></div><div><b>Кофе</b><span>пока стрижём</span><p>«Во время работы мне предложили кофе и даже провели небольшую консультацию по уходу за волосами».</p></div></div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sh"><h2>Отзывы</h2><div class="score"><b class="num">5,0</b><span>175 оценок · 150 отзывов<br>Яндекс Карты</span></div></div>
+      <div class="rv"><figure><blockquote>«Антон сделал свою работу отлично, учёл все пожелания мужа!»</blockquote><figcaption>Оксана С. · май 2025</figcaption></figure><figure><blockquote>«Шикарное место, где можно сделать шикарную стрижку. Антон профессионал своего дела»</blockquote><figcaption>Алексей Чагин · февраль 2025</figcaption></figure><figure><blockquote>«Во время работы мне предложили кофе и даже провели небольшую консультацию по уходу за волосами»</blockquote><figcaption>Максим Бабенко · май 2025</figcaption></figure></div>
+      <p style="margin-top:22px"><a class="k" href="https://yandex.ru/maps/org/uncles/214921548018/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах ↗</a></p>
+    </div>
+  </section>
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Запись</p>
+        <h2>Записаться на стрижку</h2>
+        <p>Заполните форму, и откроется WhatsApp с готовым сообщением. Подтвердим время.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="c">Когда удобно</label><input id="c" placeholder="Например, суббота после 15:00"></div>
+        </div>
+        <fieldset class="f"><legend>Услуга</legend><div class="pick"><input type="radio" name="w" id="x0" value="мужская стрижка" checked><label for="x0">Стрижка</label><input type="radio" name="w" id="x1" value="стрижка и борода"><label for="x1">Стрижка + борода</label><input type="radio" name="w" id="x2" value="под машинку"><label for="x2">Под машинку</label><input type="radio" name="w" id="x3" value="стрижка бороды"><label for="x3">Борода</label><input type="radio" name="w" id="x4" value="детская стрижка"><label for="x4">Детская</label></div></fieldset>
+        <div class="f"><label for="t">Пожелания</label><textarea id="t" placeholder="К какому мастеру, во сколько, что хотите поменять"></textarea></div>
+        <div class="cta"><a class="btn" id="wa" data-n="79606185909" href="https://wa.me/79606185909" target="_blank" rel="noopener">Открыть WhatsApp</a><a class="btn out" href="https://t.me/uncles_tula" target="_blank" rel="noopener">Telegram</a></div>
+      </form>
+      <div>
+        <p class="k">Контакты</p>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin:10px 0 22px">Проспект Ленина, 26</h2>
+        <div class="facts num">
+          <div><span>Телефон</span><span><span id="tel">+7 960 618-59-09</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Адрес</span><span>Тула, проспект Ленина, 26, 1 этаж</span></div><div><span>Ориентир</span><span>остановка «Улица Каминского», 20 м</span></div><div><span>Режим</span><span>сегодня до 20:00</span></div><div><span>Оплата</span><span>карта, наличные, перевод</span></div><div><span>Соцсети</span><span><a href="https://t.me/uncles_tula" target="_blank" rel="noopener">Telegram</a> · <a href="https://vk.ru/uncles_tula" target="_blank" rel="noopener">ВКонтакте</a></span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/uncles/214921548018/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© UNCLES, Тула</span><span>Демо‑версия сайта</span></div></footer>
+<script>
+(function(){
+  var form=document.getElementById("form"),wa=document.getElementById("wa");
+  function upd(){
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    var car=document.getElementById("c").value.trim(),t=document.getElementById("t").value.trim(),n=document.getElementById("n").value.trim();
+    wa.href="https://wa.me/"+wa.dataset.n+"?text="+encodeURIComponent("Здравствуйте! Хочу записаться: "+w+"."+(car?"\nВремя: "+car+".":"")+(t?"\n"+t:"")+(n?"\n"+n:""));
+  }
+  form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault();});upd();
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>
