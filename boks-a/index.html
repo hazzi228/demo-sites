@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Бокс А на Демонстрации</title>
+<meta name="description" content="Автосервис «Бокс А» в Туле, ул. Демонстрации 40/1, бокс 6. Ремонт японских и корейских авто, диагностика, ГРМ, сигнализации и автозапуск, аквабластинг деталей.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Wet-blast workshop: cool steel-grey paper, deep water blue, crisp geometric grotesque. Signature is a before/after panel of a cleaned part. */
+:root{--display:"Manrope","Segoe UI",sans-serif;--body:"Manrope","Segoe UI",Roboto,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--dw:800;--dls:-.035em;--dtt:none;--r:14px;--h1:clamp(2.4rem,5.8vw,4.6rem);--h2:clamp(1.9rem,4vw,3rem);--bg:#EEF2F4;--panel:#FFFFFF;--ink:#0C1A22;--muted:#52616A;--rule:#D3DCE1;--acc:#0A5C78;--acc-text:#0A5C78;--on-acc:#FFFFFF;--band:#0A3A4C;--on-band:#E8F4F8;--head-bg:#EEF2F4;--head-ink:#0C1A22}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0B1418;--panel:#111E24;--ink:#E3EDF1;--muted:#93A6AF;--rule:#21323A;--acc:#3BA8CC;--acc-text:#62C0DF;--on-acc:#04161D;--band:#082A37;--on-band:#E3EDF1;--head-bg:#0B1418;--head-ink:#E3EDF1;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0B1418;--panel:#111E24;--ink:#E3EDF1;--muted:#93A6AF;--rule:#21323A;--acc:#3BA8CC;--acc-text:#62C0DF;--on-acc:#04161D;--band:#082A37;--on-band:#E3EDF1;--head-bg:#0B1418;--head-ink:#E3EDF1;color-scheme:dark}
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.62 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head-bg)}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.04;letter-spacing:var(--dls);margin:0;text-wrap:balance;text-transform:var(--dtt)}
+.k{font:500 .76rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--head-bg);color:var(--head-ink);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:var(--dw) 1.25rem/1 var(--display);text-transform:var(--dtt);letter-spacing:var(--dls)}
+.logo small{display:block;font:400 .72rem var(--mono);opacity:.7;margin-top:3px}
+.logo .m{flex:none}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:.92rem;font-weight:500;opacity:.72}
+.top nav a:hover{opacity:1}
+.tel{font:500 .95rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--on-acc);font:600 .97rem/1 var(--body);padding:14px 20px;border-radius:var(--r);text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}.top .tel{font-size:.82rem}}
+.hero{padding-block:clamp(36px,6vw,80px);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:var(--h1);margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--acc-text)}
+.hero .lede{font-size:1.14rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{font:400 .8rem var(--mono);border:1px solid var(--rule);background:var(--panel);padding:5px 10px;border-radius:999px}
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px 48px;align-items:end;margin-bottom:34px}
+@media (max-width:800px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:var(--h2)}
+.sh p{margin:0;color:var(--muted);max-width:56ch}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;border-top:2px solid var(--ink)}
+@media (max-width:900px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.groups{grid-template-columns:1fr}}
+.groups div{padding:20px 0 22px;border-bottom:1px solid var(--rule)}
+.groups h3{font-size:1.3rem;margin-bottom:8px}
+.groups ul{list-style:none;margin:0;padding:0;color:var(--muted);font-size:.97rem}
+.groups li{padding:2px 0}
+.price{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 48px;align-items:start}
+@media (max-width:800px){.price{grid-template-columns:1fr}}
+.price h3{font-size:1.6rem}
+.price .pl{border-top:2px solid var(--ink)}
+.pi{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.pi span{min-width:0}
+.pi i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px);min-width:12px}
+.pi b{font:500 .98rem var(--mono);white-space:nowrap}
+.pnote{font:400 .8rem var(--mono);color:var(--muted);margin:10px 0 0}
+.band{background:var(--band);color:var(--on-band)}
+.band .k{color:color-mix(in srgb,var(--on-band) 62%,transparent)}
+.band .sh p{color:color-mix(in srgb,var(--on-band) 72%,transparent)}
+.ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.ppl div{border-top:3px solid var(--acc);padding-top:14px}
+.ppl b{display:block;font:var(--dw) 1.5rem/1.1 var(--display);text-transform:var(--dtt)}
+.ppl span{display:block;font:400 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin:6px 0 10px}
+.ppl p{margin:0;opacity:.85;font-size:.97rem}
+.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rv{grid-template-columns:1fr}}
+.rv figure{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px}
+.rv blockquote{margin:0;font-size:1.03rem}
+.rv figcaption{margin-top:auto;font:400 .78rem var(--mono);color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font:var(--dw) 3rem/1 var(--display);color:var(--acc-text)}
+.score span{font:400 .8rem var(--mono);color:var(--muted)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--acc)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--bg);padding:8px 13px;border-radius:999px;font:500 .92rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.pick input:focus-visible+label{outline:3px solid var(--acc);outline-offset:2px}
+.facts{border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .7rem var(--mono);padding:3px 7px;border-radius:4px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .78rem var(--mono);color:var(--muted)}
+
+.spec{background:var(--panel);border-radius:22px;padding:26px;box-shadow:0 1px 0 var(--rule),0 18px 40px -24px rgba(10,60,80,.35)}
+.spec .big{font:800 4.6rem/1 var(--display);letter-spacing:-.04em;color:var(--acc-text);margin-top:10px}
+.spec .sub{margin:6px 0 16px;color:var(--muted);font-size:.92rem}
+.spec ul{list-style:none;margin:0;padding:0}
+.spec li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-top:1px solid var(--rule)}
+.spec li b{font:500 .95rem var(--mono)}
+.abg{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;background:var(--panel);border-radius:28px;padding:40px}
+@media (max-width:860px){.abg{grid-template-columns:1fr;padding:24px;gap:26px}}
+.abt h2{font:800 clamp(1.6rem,3vw,2.3rem)/1.1 var(--display);letter-spacing:-.03em;margin:8px 0 14px}
+.abt p{color:var(--muted);margin:0 0 18px}
+.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.tags li{border:1px solid var(--rule);border-radius:999px;padding:5px 12px;font-size:.9rem}
+.ba{margin:0;display:grid;grid-template-columns:1fr 1fr;border-radius:20px;overflow:hidden;aspect-ratio:4/3;position:relative}
+.ba>div{position:relative}
+.before{background:radial-gradient(circle at 30% 35%,#7a4a24 0 12%,transparent 13%),radial-gradient(circle at 65% 70%,#5b3418 0 16%,transparent 17%),radial-gradient(circle at 75% 25%,#8c5a2c 0 8%,transparent 9%),repeating-radial-gradient(circle at 40% 60%,#3d3a36 0 3px,#4a4540 3px 7px)}
+.after{background:linear-gradient(135deg,#d9dee1,#b9c1c6 45%,#e6eaec 55%,#aeb7bd);box-shadow:inset 1px 0 0 rgba(255,255,255,.6)}
+.ba span{position:absolute;top:12px;left:12px;font:500 .72rem var(--mono);text-transform:uppercase;letter-spacing:.08em;background:rgba(0,0,0,.55);color:#fff;padding:4px 9px;border-radius:999px}
+.ba figcaption{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;font-size:.85rem}
+.btn,.pick label{border-radius:999px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="m" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="var(--acc)"/><text x="17" y="24" text-anchor="middle" font-family="Manrope,sans-serif" font-weight="800" font-size="19" fill="var(--on-acc)">А</text><circle cx="27" cy="8" r="2.4" fill="var(--on-acc)" opacity=".7"/><circle cx="22.5" cy="5.5" r="1.4" fill="var(--on-acc)" opacity=".5"/></svg><span><b>Бокс А</b><small>автосервис · Демонстрации, 40/1</small></span></a>
+    <nav aria-label="Разделы"><a href="#services">Услуги</a><a href="#people">Мастера</a><a href="#reviews">Отзывы</a><a href="#contact">Запись</a></nav>
+    <a class="tel num" href="tel:+79207744004">+7 920 774-40-04</a>
+    <a class="btn" href="#contact">Записаться</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · ул. Демонстрации, 40/1, бокс 6</p>
+        <h1>Японцы, корейцы <em>и детали как из коробки.</em></h1>
+        <p class="lede">Диагностика, ремонт двигателя и ходовой, ГРМ, сцепление, выхлоп, ТО. Ставим сигнализации и автозапуск. Отмываем детали аквабластингом: суппорты, ГБЦ, корпуса и диски возвращаются к заводскому виду.</p>
+        <div class="cta"><a class="btn" href="#contact">Записаться в WhatsApp</a><a class="btn out num" href="tel:+79207744004">+7 920 774-40-04</a></div>
+        <div class="chips"><span>Гарантия</span><span>Гибриды</span><span>Сигнализации и автозапуск</span><span>Эндоскопия двигателя</span></div>
+      </div>
+      <aside class="spec"><span class="k">Бокс 6 · сегодня до 19:00</span>
+  <div class="big num">4,9</div><p class="sub">135 оценок · 87 отзывов<br>«Хорошее место 2026» на Яндекс Картах</p>
+  <ul><li><span>Техобслуживание</span><b class="num">2 000 ₽</b></li><li><span>Диагностика ходовой</span><b class="num">1 500 ₽</b></li><li><span>Замена ремня ГРМ</span><b class="num">6 000 ₽</b></li><li><span>Аквабластинг детали</span><b class="num">1 000 ₽</b></li></ul></aside>
+    </div>
+  </section>
+  <section class="ab" style="padding-top:0"><div class="wrap"><div class="abg">
+  <div class="abt"><p class="k">Что такое аквабластинг</p><h2>Вода, абразив и давление. Без кислоты и наждачки.</h2>
+  <p>Смесь воды и мелкого абразива снимает нагар, ржавчину и старую грязь, но не «съедает» металл и не забивает каналы, как сухой пескоструй. Деталь выходит матовой и чистой, её приятно ставить обратно.</p>
+  <ul class="tags"><li>Суппорты</li><li>Головки блока</li><li>Корпуса КПП</li><li>Литые диски</li><li>Впускные коллекторы</li></ul></div>
+  <figure class="ba" aria-label="До и после аквабластинга"><div class="before"><span>до</span></div><div class="after"><span>после</span></div><figcaption>Одна деталь, 1 000 ₽ · сроки скажем по фото в VK или MAX</figcaption></figure>
+ </div></div></section>
+  <section id="services">
+    <div class="wrap">
+      <div class="sh"><h2>Что делаем</h2><p>Легковые авто, особенно японские и корейские: Toyota, Lexus, Honda, Nissan, Mazda, Subaru, Mitsubishi, Hyundai, Kia. Ремонтируем и гибриды.</p></div>
+      <div class="groups"><div><h3>Двигатель</h3><ul><li>Ремонт двигателя</li><li>Замена ремня ГРМ</li><li>Раскоксовка</li><li>Эндоскопия двигателя</li></ul></div><div><h3>Ходовая и тормоза</h3><ul><li>Диагностика ходовой</li><li>Ремонт ходовой</li><li>Ремонт тормозной системы</li><li>Шаровые опоры</li></ul></div><div><h3>Трансмиссия</h3><ul><li>Ремонт сцепления</li><li>Замена масла в АКПП с фильтром</li></ul></div><div><h3>Электрика</h3><ul><li>Компьютерная диагностика</li><li>Сигнализации и автозапуск</li><li>Парктроники и магнитолы</li><li>Шумоизоляция</li></ul></div><div><h3>Выхлоп и сварка</h3><ul><li>Ремонт выхлопной системы</li><li>Удаление катализатора</li><li>Сварочные работы</li></ul></div><div><h3>Детали</h3><ul><li>Аквабластинг</li><li>Пескоструйная очистка</li><li>Техническое обслуживание</li></ul></div></div>
+      <div class="price"><div><h3>Цены</h3><p class="pnote">Цены из карточки сервиса на Яндекс Картах. Остальное называем после осмотра, до начала работ.</p></div><div class="pl num"><div class="pi"><span>Техническое обслуживание, по записи</span><i></i><b>2 000 ₽</b></div><div class="pi"><span>Диагностика ходовой части</span><i></i><b>1 500 ₽</b></div><div class="pi"><span>Замена ремня ГРМ</span><i></i><b>6 000 ₽</b></div><div class="pi"><span>Замена масла в АКПП с фильтром</span><i></i><b>2 200 ₽/ч</b></div><div class="pi"><span>Аквабластинг, гидроабразивная очистка</span><i></i><b>1 000 ₽</b></div></div></div>
+    </div>
+  </section>
+  <section id="people" class="band">
+    <div class="wrap">
+      <div class="sh"><h2>Мастер</h2><p>Клиенты в отзывах называют мастеров по именам.</p></div>
+      <div class="ppl"><div><b>Дмитрий</b><span>мастер</span><p>Ставит сигнализации и автозапуск, показывает, как всем пользоваться.</p></div><div><b>Бокс 6</b><span>приёмка</span><p>Тёплый бокс, кофе, Wi‑Fi. Можно подождать машину на месте.</p></div></div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sh"><h2>Отзывы</h2><div class="score"><b class="num">4,9</b><span>135 оценок · 87 отзывов<br>Яндекс Карты</span></div></div>
+      <div class="rv"><figure><blockquote>«Отличный сервис, лучшая диагностика, цены наверное лучшие в Туле»</blockquote><figcaption>Владислав Холин · июнь 2025</figcaption></figure><figure><blockquote>«Приехал по совету, провели диагностику, записали через неделю. Проблему устранили»</blockquote><figcaption>Дима · Яндекс Карты</figcaption></figure><figure><blockquote>«Ни разу не возникло претензий, рекомендую однозначно»</blockquote><figcaption>Вячеслав Н. · Яндекс Карты</figcaption></figure></div>
+      <p style="margin-top:22px"><a class="k" href="https://yandex.ru/maps/org/akvablasting_boks_a/213163895175/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах ↗</a></p>
+    </div>
+  </section>
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Запись</p>
+        <h2>Записаться в WhatsApp</h2>
+        <p>Заполните форму, и откроется WhatsApp с готовым сообщением мастеру.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="c">Автомобиль</label><input id="c" placeholder="Например, Toyota Camry 2015"></div>
+        </div>
+        <fieldset class="f"><legend>Что нужно</legend><div class="pick"><input type="radio" name="w" id="x0" value="диагностика" checked><label for="x0">Диагностика</label><input type="radio" name="w" id="x1" value="ремонт двигателя / ГРМ"><label for="x1">Двигатель / ГРМ</label><input type="radio" name="w" id="x2" value="ходовая"><label for="x2">Ходовая</label><input type="radio" name="w" id="x3" value="сигнализация / автозапуск"><label for="x3">Сигнализация</label><input type="radio" name="w" id="x4" value="ТО"><label for="x4">ТО</label><input type="radio" name="w" id="x5" value="аквабластинг детали"><label for="x5">Аквабластинг</label></div></fieldset>
+        <div class="f"><label for="t">Что случилось</label><textarea id="t" placeholder="Коротко опишите проблему"></textarea></div>
+        <div class="cta"><a class="btn" id="wa" data-n="79207744004" href="https://wa.me/79207744004" target="_blank" rel="noopener">Открыть WhatsApp</a><a class="btn out" href="https://vk.ru/boks_a_akvablast" target="_blank" rel="noopener">ВКонтакте</a></div>
+      </form>
+      <div>
+        <p class="k">Контакты</p>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin:10px 0 22px">Демонстрации, 40/1, бокс 6</h2>
+        <div class="facts num">
+          <div><span>Телефон</span><span><span id="tel">+7 920 774-40-04</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Адрес</span><span>Тула, ул. Демонстрации, 40/1,<br>бокс 6</span></div><div><span>Ориентир</span><span>остановка «Колледж Сафонова», 200 м</span></div><div><span>Режим</span><span>до 19:00, по записи</span></div><div><span>Оплата</span><span>наличные, безнал</span></div><div><span>Соцсети</span><span><a href="https://vk.ru/boks_a_akvablast" target="_blank" rel="noopener">ВКонтакте</a> · <a href="https://max.ru/u/f9LHodD0cOKzZLAELfrUo4oPpcF02J8EnmR925YZ-n7qOzqlLlt2Xmu_W00" target="_blank" rel="noopener">MAX</a></span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/akvablasting_boks_a/213163895175/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© Бокс А, Тула</span><span>Демо‑версия сайта</span></div></footer>
+<script>
+(function(){
+  var form=document.getElementById("form"),wa=document.getElementById("wa");
+  function upd(){
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    var car=document.getElementById("c").value.trim(),t=document.getElementById("t").value.trim(),n=document.getElementById("n").value.trim();
+    wa.href="https://wa.me/"+wa.dataset.n+"?text="+encodeURIComponent("Здравствуйте! Хочу записаться: "+w+"."+(car?"\nАвтомобиль: "+car+".":"")+(t?"\n"+t:"")+(n?"\n"+n:""));
+  }
+  form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault();});upd();
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>

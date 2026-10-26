@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Автобокс71 на Галкина</title>
+<meta name="description" content="Автосервис Автобокс71 в Туле, ул. Галкина 7/1. ТО, тормоза, подвеска, ГРМ, сцепление, сварка выхлопа. Цены с расшифровкой, что входит в работу.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800;900&family=Nunito+Sans:wght@400;600;700&family=Cousine:wght@400;700&display=swap">
+<style>
+/* Price-tag workshop: warm white, black ink, signal orange tags with a punched hole. Each price tag explains what is included. */
+:root{--display:"Montserrat","Segoe UI",sans-serif;--body:"Nunito Sans","Segoe UI",Roboto,sans-serif;--mono:"Cousine",ui-monospace,Menlo,monospace;--dw:900;--dls:-.03em;--dtt:uppercase;--r:6px;--h1:clamp(2.2rem,5.4vw,4.2rem);--h2:clamp(1.8rem,4vw,2.8rem);--bg:#FAF8F5;--panel:#FFFFFF;--ink:#141414;--muted:#5F5B55;--rule:#E3DED6;--acc:#FF5A1F;--acc-text:#D9430C;--on-acc:#141414;--band:#141414;--on-band:#FAF8F5;--head-bg:#FAF8F5;--head-ink:#141414}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121110;--panel:#1B1A18;--ink:#F1EEE9;--muted:#A9A49C;--rule:#2E2C29;--acc:#FF6B33;--acc-text:#FF8556;--on-acc:#141414;--band:#0A0A09;--on-band:#F1EEE9;--head-bg:#121110;--head-ink:#F1EEE9;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121110;--panel:#1B1A18;--ink:#F1EEE9;--muted:#A9A49C;--rule:#2E2C29;--acc:#FF6B33;--acc-text:#FF8556;--on-acc:#141414;--band:#0A0A09;--on-band:#F1EEE9;--head-bg:#121110;--head-ink:#F1EEE9;color-scheme:dark}
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.62 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head-bg)}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.04;letter-spacing:var(--dls);margin:0;text-wrap:balance;text-transform:var(--dtt)}
+.k{font:500 .76rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--head-bg);color:var(--head-ink);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:var(--dw) 1.25rem/1 var(--display);text-transform:var(--dtt);letter-spacing:var(--dls)}
+.logo small{display:block;font:400 .72rem var(--mono);opacity:.7;margin-top:3px}
+.logo .m{flex:none}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:.92rem;font-weight:500;opacity:.72}
+.top nav a:hover{opacity:1}
+.tel{font:500 .95rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--on-acc);font:600 .97rem/1 var(--body);padding:14px 20px;border-radius:var(--r);text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}.top .tel{font-size:.82rem}}
+.hero{padding-block:clamp(36px,6vw,80px);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:var(--h1);margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--acc-text)}
+.hero .lede{font-size:1.14rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{font:400 .8rem var(--mono);border:1px solid var(--rule);background:var(--panel);padding:5px 10px;border-radius:999px}
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px 48px;align-items:end;margin-bottom:34px}
+@media (max-width:800px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:var(--h2)}
+.sh p{margin:0;color:var(--muted);max-width:56ch}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;border-top:2px solid var(--ink)}
+@media (max-width:900px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.groups{grid-template-columns:1fr}}
+.groups div{padding:20px 0 22px;border-bottom:1px solid var(--rule)}
+.groups h3{font-size:1.3rem;margin-bottom:8px}
+.groups ul{list-style:none;margin:0;padding:0;color:var(--muted);font-size:.97rem}
+.groups li{padding:2px 0}
+.price{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 48px;align-items:start}
+@media (max-width:800px){.price{grid-template-columns:1fr}}
+.price h3{font-size:1.6rem}
+.price .pl{border-top:2px solid var(--ink)}
+.pi{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.pi span{min-width:0}
+.pi i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px);min-width:12px}
+.pi b{font:500 .98rem var(--mono);white-space:nowrap}
+.pnote{font:400 .8rem var(--mono);color:var(--muted);margin:10px 0 0}
+.band{background:var(--band);color:var(--on-band)}
+.band .k{color:color-mix(in srgb,var(--on-band) 62%,transparent)}
+.band .sh p{color:color-mix(in srgb,var(--on-band) 72%,transparent)}
+.ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.ppl div{border-top:3px solid var(--acc);padding-top:14px}
+.ppl b{display:block;font:var(--dw) 1.5rem/1.1 var(--display);text-transform:var(--dtt)}
+.ppl span{display:block;font:400 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin:6px 0 10px}
+.ppl p{margin:0;opacity:.85;font-size:.97rem}
+.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rv{grid-template-columns:1fr}}
+.rv figure{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px}
+.rv blockquote{margin:0;font-size:1.03rem}
+.rv figcaption{margin-top:auto;font:400 .78rem var(--mono);color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font:var(--dw) 3rem/1 var(--display);color:var(--acc-text)}
+.score span{font:400 .8rem var(--mono);color:var(--muted)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--acc)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--bg);padding:8px 13px;border-radius:999px;font:500 .92rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.pick input:focus-visible+label{outline:3px solid var(--acc);outline-offset:2px}
+.facts{border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .7rem var(--mono);padding:3px 7px;border-radius:4px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .78rem var(--mono);color:var(--muted)}
+
+.tagstack{position:relative;min-height:300px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.tg{position:relative;display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--acc);color:#141414;padding:16px 20px 16px 42px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 50%,calc(100% - 22px) 100%,0 100%);max-width:420px}
+.tg::before{content:"";position:absolute;left:16px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:var(--bg)}
+.tg span{font-weight:700}
+.tg b{font:700 1.35rem var(--mono);padding-right:18px;white-space:nowrap}
+.t1{transform:rotate(-2deg)}.t2{transform:rotate(1.5deg);margin-left:24px;background:#141414;color:#FAF8F5}.t3{transform:rotate(-1deg);margin-left:8px}
+@media (max-width:520px){.t2{margin-left:10px}.tg{padding-left:38px}}
+.ts{margin:8px 0 0;font:400 .82rem var(--mono);color:var(--muted)}
+.hero{overflow-x:clip}
+.incg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.incg{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.incg{grid-template-columns:1fr}}
+.incg article{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:20px;border-left:5px solid var(--acc)}
+.incg header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
+.incg header b{font:800 1rem/1.2 var(--display);text-transform:uppercase}
+.incg header span{font:700 1rem var(--mono);color:var(--acc-text);white-space:nowrap}
+.incg p{margin:0;color:var(--muted);font-size:.95rem}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="m" width="36" height="30" viewBox="0 0 36 30" aria-hidden="true"><path d="M0 4a4 4 0 0 1 4-4h20l12 15-12 15H4a4 4 0 0 1-4-4z" fill="var(--acc)"/><circle cx="25" cy="15" r="3" fill="var(--bg)"/><text x="11" y="20" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="13" fill="#141414">71</text></svg><span><b>Автобокс71</b><small>автосервис · ул. Галкина, 7/1</small></span></a>
+    <nav aria-label="Разделы"><a href="#services">Услуги</a><a href="#people">Мастера</a><a href="#reviews">Отзывы</a><a href="#contact">Запись</a></nav>
+    <a class="tel num" href="tel:+79190808115">+7 919 080-81-15</a>
+    <a class="btn" href="#contact">Записаться</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · ул. Галкина, 7/1</p>
+        <h1>Быстро, недорого <em>и понятно, за что платите.</em></h1>
+        <p class="lede">ТО, тормоза, подвеска, ГРМ, сцепление, сход‑развал и шиномонтаж. Свой сварщик: починим выхлоп и кронштейны. Поможем подобрать и купить запчасти.</p>
+        <div class="cta"><a class="btn" href="#contact">Записаться в WhatsApp</a><a class="btn out num" href="tel:+79190808115">+7 919 080-81-15</a></div>
+        <div class="chips"><span>Гарантия</span><span>Сварка</span><span>Запчасти на иномарки</span><span>Сход‑развал</span></div>
+      </div>
+      <aside class="tagstack" aria-label="Примеры цен"><div class="tg t1"><span>Замена масла ДВС</span><b class="num">600 ₽</b></div><div class="tg t2"><span>Комплексное ТО</span><b class="num">1 500 ₽</b></div><div class="tg t3"><span>Компьютерная диагностика</span><b class="num">600 ₽</b></div>
+  <p class="ts">4,7 · 66 оценок на Яндекс Картах</p></aside>
+    </div>
+  </section>
+  <section class="inc" style="padding-top:0"><div class="wrap"><div class="sh"><h2>Что входит в цену</h2><p>Пишем не только сумму, но и что за неё делаем. Так проще сравнить с другими сервисами.</p></div>
+ <div class="incg">
+  <article><header><b>Замена масла ДВС</b><span class="num">600 ₽</span></header><p>Снимаем и ставим обратно защиту картера, меняем масло. Фильтры по 200 ₽.</p></article>
+  <article><header><b>Комплексное ТО</b><span class="num">1 500 ₽</span></header><p>Масло в двигателе, салонный и воздушный фильтры, диагностика подвески и тормозов, лампы, давление в шинах.</p></article>
+  <article><header><b>Тормозные диски</b><span class="num">2 000 ₽</span></header><p>Замена с обслуживанием: чистим и смазываем посадочные места и направляющие суппорта.</p></article>
+  <article><header><b>Дисковые колодки</b><span class="num">800 / 1 500 ₽</span></header><p>Без обслуживания суппорта или с ним. Выбираете вы.</p></article>
+  <article><header><b>Гофра выпуска</b><span class="num">от 2 500 ₽</span></header><p>Осмотр бесплатно. Цену согласуем после осмотра, варим на месте.</p></article>
+  <article><header><b>Диагностика подвески</b><span class="num">500 ₽</span></header><p>Подвеска и тормозная система. После неё понятно, что менять сейчас, а что подождёт.</p></article>
+ </div></div></section>
+  <section id="services">
+    <div class="wrap">
+      <div class="sh"><h2>Что делаем</h2><p>Японские, корейские, китайские, европейские и отечественные автомобили.</p></div>
+      <div class="groups"><div><h3>Обслуживание</h3><ul><li>Комплексное ТО</li><li>Замена масла ДВС и МКПП</li><li>Фильтры, тормозная жидкость</li></ul></div><div><h3>Тормоза</h3><ul><li>Колодки дисковые и барабанные</li><li>Диски с обслуживанием суппортов</li><li>Диагностика тормозов</li></ul></div><div><h3>Подвеска и рулевое</h3><ul><li>Сайлентблоки рычагов</li><li>Шаровые, стойки, наконечники</li><li>Рулевые тяги</li><li>Сход‑развал</li></ul></div><div><h3>Двигатель</h3><ul><li>Замена ГРМ</li><li>Прокладка клапанной крышки</li><li>Свечи зажигания</li><li>Компьютерная диагностика</li></ul></div><div><h3>Трансмиссия</h3><ul><li>Замена сцепления</li><li>Ремонт КПП и РКПП</li></ul></div><div><h3>Сварка и выхлоп</h3><ul><li>Гофра и глушители</li><li>Кронштейны выхлопа</li><li>Сварочные работы</li></ul></div></div>
+      <div class="price"><div><h3>Цены</h3><p class="pnote">Цены из карточки сервиса на Яндекс Картах. Остальное называем после осмотра, до начала работ.</p></div><div class="pl num"><div class="pi"><span>Замена ГРМ</span><i></i><b>от 4 500 ₽</b></div><div class="pi"><span>Замена сцепления</span><i></i><b>от 5 500 ₽</b></div><div class="pi"><span>Сайлентблоки передних рычагов</span><i></i><b>от 3 200 ₽</b></div><div class="pi"><span>Сход‑развал</span><i></i><b>от 1 500 ₽</b></div><div class="pi"><span>Замена тормозной жидкости</span><i></i><b>900 ₽</b></div></div></div>
+    </div>
+  </section>
+  <section id="people" class="band">
+    <div class="wrap">
+      <div class="sh"><h2>Мастера</h2><p>Клиенты в отзывах называют мастеров по именам.</p></div>
+      <div class="ppl"><div><b>Никита</b><span>мастер</span><p>«Никите респект!»</p></div><div><b>Сварщик</b><span>на месте</span><p>Подгнивший кронштейн не латаем, а делаем новый.</p></div><div><b>Запчасти</b><span>подбор</span><p>Помогаем выбрать и купить детали для иномарок.</p></div></div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sh"><h2>Отзывы</h2><div class="score"><b class="num">4,7</b><span>66 оценок · 35 отзывов<br>Яндекс Карты</span></div></div>
+      <div class="rv"><figure><blockquote>«Работают быстрее, чем я успеваю сломаться»</blockquote><figcaption>Мария Козлова · Яндекс Карты</figcaption></figure><figure><blockquote>«Мастера работают на совесть: всё чётко, быстро и качественно»</blockquote><figcaption>Юлия Шаргу · Яндекс Карты</figcaption></figure><figure><blockquote>«Меняла ГРМ. Быстро и по отличной цене!»</blockquote><figcaption>Анастасия Ляшенко · февраль 2022</figcaption></figure></div>
+      <p style="margin-top:22px"><a class="k" href="https://yandex.ru/maps/org/avtobox71/169854662626/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах ↗</a></p>
+    </div>
+  </section>
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Запись</p>
+        <h2>Записаться в WhatsApp</h2>
+        <p>Заполните форму, и откроется WhatsApp с готовым сообщением мастеру.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="c">Автомобиль</label><input id="c" placeholder="Например, Kia Rio 2017"></div>
+        </div>
+        <fieldset class="f"><legend>Что нужно</legend><div class="pick"><input type="radio" name="w" id="x0" value="ТО / замена масла" checked><label for="x0">ТО и масло</label><input type="radio" name="w" id="x1" value="тормоза"><label for="x1">Тормоза</label><input type="radio" name="w" id="x2" value="подвеска"><label for="x2">Подвеска</label><input type="radio" name="w" id="x3" value="замена ГРМ"><label for="x3">ГРМ</label><input type="radio" name="w" id="x4" value="сцепление"><label for="x4">Сцепление</label><input type="radio" name="w" id="x5" value="сварка / выхлоп"><label for="x5">Сварка</label></div></fieldset>
+        <div class="f"><label for="t">Что случилось</label><textarea id="t" placeholder="Коротко опишите проблему"></textarea></div>
+        <div class="cta"><a class="btn" id="wa" data-n="79190808115" href="https://wa.me/79190808115" target="_blank" rel="noopener">Открыть WhatsApp</a></div>
+      </form>
+      <div>
+        <p class="k">Контакты</p>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin:10px 0 22px">ул. Галкина, 7/1</h2>
+        <div class="facts num">
+          <div><span>Телефон</span><span><span id="tel">+7 919 080-81-15</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Адрес</span><span>Тула, ул. Галкина, 7/1</span></div><div><span>Режим</span><span>до 19:00, по записи</span></div><div><span>Оплата</span><span>наличные, перевод</span></div><div><span>Мессенджеры</span><span>WhatsApp · <a href="https://viber.click/79190808115" target="_blank" rel="noopener">Viber</a></span></div><div><span>Соцсети</span><span><a href="https://vk.ru/avtobox_71galkina" target="_blank" rel="noopener">ВКонтакте ↗</a></span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/avtobox71/169854662626/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© Автобокс71, Тула</span><span>Демо‑версия сайта</span></div></footer>
+<script>
+(function(){
+  var form=document.getElementById("form"),wa=document.getElementById("wa");
+  function upd(){
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    var car=document.getElementById("c").value.trim(),t=document.getElementById("t").value.trim(),n=document.getElementById("n").value.trim();
+    wa.href="https://wa.me/"+wa.dataset.n+"?text="+encodeURIComponent("Здравствуйте! Хочу записаться: "+w+"."+(car?"\nАвтомобиль: "+car+".":"")+(t?"\n"+t:"")+(n?"\n"+n:""));
+  }
+  form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault();});upd();
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>

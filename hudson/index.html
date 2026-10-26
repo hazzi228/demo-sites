@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hudson на Болдина</title>
+<meta name="description" content="Автосервис Hudson в Туле, ул. Болдина 98А. Рейтинг 5,0. Подвеска, двигатель, ТО, тормоза, 3D развал-схождение, кондиционеры. Полный прайс на сайте.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=PT+Sans:wght@400;700&family=Anonymous+Pro:wght@400;700&display=swap">
+<style>
+/* American roadside garage sign: cream paper, deep navy, brass. Condensed uppercase display, a tabbed full price board as signature. */
+:root{--display:"Oswald","Arial Narrow",sans-serif;--body:"PT Sans","Segoe UI",Roboto,sans-serif;--mono:"Anonymous Pro",ui-monospace,Menlo,monospace;--dw:600;--dls:.01em;--dtt:uppercase;--r:4px;--h1:clamp(2.6rem,6.4vw,5rem);--h2:clamp(2rem,4.4vw,3.2rem);--bg:#F5F0E6;--panel:#FBF8F2;--ink:#16213A;--muted:#5D6374;--rule:#DCD3C2;--acc:#1C2B4A;--acc-text:#A9762A;--on-acc:#F5F0E6;--band:#1C2B4A;--on-band:#F5F0E6;--head-bg:#1C2B4A;--head-ink:#F5F0E6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0F1525;--panel:#161E32;--ink:#ECE6D9;--muted:#A3A8B8;--rule:#28314A;--acc:#D2A456;--acc-text:#D9AE62;--on-acc:#0F1525;--band:#0A0F1C;--on-band:#ECE6D9;--head-bg:#0A0F1C;--head-ink:#ECE6D9;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1525;--panel:#161E32;--ink:#ECE6D9;--muted:#A3A8B8;--rule:#28314A;--acc:#D2A456;--acc-text:#D9AE62;--on-acc:#0F1525;--band:#0A0F1C;--on-band:#ECE6D9;--head-bg:#0A0F1C;--head-ink:#ECE6D9;color-scheme:dark}
+
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.02rem/1.62 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--head-bg)}
+.wrap{max-width:1140px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:var(--dw);line-height:1.04;letter-spacing:var(--dls);margin:0;text-wrap:balance;text-transform:var(--dtt)}
+.k{font:500 .76rem/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--head-bg);color:var(--head-ink);border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;align-items:center;gap:20px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font:var(--dw) 1.25rem/1 var(--display);text-transform:var(--dtt);letter-spacing:var(--dls)}
+.logo small{display:block;font:400 .72rem var(--mono);opacity:.7;margin-top:3px}
+.logo .m{flex:none}
+.top nav{display:flex;gap:22px;margin-left:auto}
+.top nav a{text-decoration:none;font-size:.92rem;font-weight:500;opacity:.72}
+.top nav a:hover{opacity:1}
+.tel{font:500 .95rem var(--mono);text-decoration:none;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:var(--on-acc);font:600 .97rem/1 var(--body);padding:14px 20px;border-radius:var(--r);text-decoration:none;border:0;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.out{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+@media (max-width:900px){.top nav{display:none}.top .tel{margin-left:auto}}
+@media (max-width:520px){.top .btn{display:none}.top .tel{font-size:.82rem}}
+.hero{padding-block:clamp(36px,6vw,80px);overflow-x:clip}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:var(--h1);margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--acc-text)}
+.hero .lede{font-size:1.14rem;color:var(--muted);max-width:52ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chips span{font:400 .8rem var(--mono);border:1px solid var(--rule);background:var(--panel);padding:5px 10px;border-radius:999px}
+section{padding-block:clamp(56px,8vw,100px)}
+.sh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:14px 48px;align-items:end;margin-bottom:34px}
+@media (max-width:800px){.sh{grid-template-columns:1fr}}
+.sh h2{font-size:var(--h2)}
+.sh p{margin:0;color:var(--muted);max-width:56ch}
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;border-top:2px solid var(--ink)}
+@media (max-width:900px){.groups{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.groups{grid-template-columns:1fr}}
+.groups div{padding:20px 0 22px;border-bottom:1px solid var(--rule)}
+.groups h3{font-size:1.3rem;margin-bottom:8px}
+.groups ul{list-style:none;margin:0;padding:0;color:var(--muted);font-size:.97rem}
+.groups li{padding:2px 0}
+.price{margin-top:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px 48px;align-items:start}
+@media (max-width:800px){.price{grid-template-columns:1fr}}
+.price h3{font-size:1.6rem}
+.price .pl{border-top:2px solid var(--ink)}
+.pi{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.pi span{min-width:0}
+.pi i{flex:1;border-bottom:1px dotted var(--rule);transform:translateY(-4px);min-width:12px}
+.pi b{font:500 .98rem var(--mono);white-space:nowrap}
+.pnote{font:400 .8rem var(--mono);color:var(--muted);margin:10px 0 0}
+.band{background:var(--band);color:var(--on-band)}
+.band .k{color:color-mix(in srgb,var(--on-band) 62%,transparent)}
+.band .sh p{color:color-mix(in srgb,var(--on-band) 72%,transparent)}
+.ppl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px}
+.ppl div{border-top:3px solid var(--acc);padding-top:14px}
+.ppl b{display:block;font:var(--dw) 1.5rem/1.1 var(--display);text-transform:var(--dtt)}
+.ppl span{display:block;font:400 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;opacity:.65;margin:6px 0 10px}
+.ppl p{margin:0;opacity:.85;font-size:.97rem}
+.rv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:900px){.rv{grid-template-columns:1fr}}
+.rv figure{margin:0;background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:14px}
+.rv blockquote{margin:0;font-size:1.03rem}
+.rv figcaption{margin-top:auto;font:400 .78rem var(--mono);color:var(--muted)}
+.score{display:flex;align-items:baseline;gap:12px}
+.score b{font:var(--dw) 3rem/1 var(--display);color:var(--acc-text)}
+.score span{font:400 .8rem var(--mono);color:var(--muted)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+form{background:var(--panel);border:1px solid var(--rule);border-radius:var(--r);padding:clamp(20px,3vw,30px);display:grid;gap:18px}
+form h2{font-size:clamp(1.7rem,3.2vw,2.3rem)}
+form>p{margin:-6px 0 0;color:var(--muted)}
+.f{display:grid;gap:6px}
+.f label,.f legend{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.f input,.f textarea{font:400 1rem var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;width:100%}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--acc)}
+.f textarea{min-height:76px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:6px}
+.pick{display:flex;flex-wrap:wrap;gap:7px;position:relative}
+.pick input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.pick label{cursor:pointer;border:1px solid var(--rule);background:var(--bg);padding:8px 13px;border-radius:999px;font:500 .92rem var(--body);text-transform:none;letter-spacing:0;color:var(--ink)}
+.pick input:checked+label{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.pick input:focus-visible+label{outline:3px solid var(--acc);outline-offset:2px}
+.facts{border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--rule)}
+.facts div span:first-child{font:500 .74rem var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:4px}
+.facts div span:last-child{text-align:right}
+.copy{margin-left:8px;background:none;border:1px solid var(--rule);color:inherit;font:400 .7rem var(--mono);padding:3px 7px;border-radius:4px;cursor:pointer}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px;border-top:1px solid var(--rule);font:400 .78rem var(--mono);color:var(--muted)}
+
+.top .logo b{letter-spacing:.12em}
+.top .btn{background:#C8963E;color:#1C2B4A}
+.sign{background:var(--acc);color:var(--on-acc);padding:22px 24px;border-radius:6px;box-shadow:inset 0 0 0 3px var(--acc),inset 0 0 0 5px #C8963E}
+.sign .sg-top{display:flex;justify-content:space-between;font:600 .8rem var(--display);text-transform:uppercase;letter-spacing:.2em;color:#C8963E;padding-bottom:12px;border-bottom:1px dashed rgba(200,150,62,.5)}
+.sg-r{display:flex;align-items:center;gap:14px;padding:14px 0}
+.sg-r b{font:700 3.6rem/1 var(--display)}
+.sg-r span{font:400 .85rem/1.3 var(--mono);opacity:.8}
+.sg-l{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-top:1px solid rgba(245,240,230,.16)}
+.sg-l b{font:700 1rem var(--mono);color:#E0B46A}
+.sg-more{display:block;margin-top:14px;font:600 .9rem var(--display);text-transform:uppercase;letter-spacing:.08em;color:#E0B46A;text-decoration:none}
+.bd{display:grid;grid-template-columns:220px 1fr;gap:28px;border-top:3px solid var(--ink);padding-top:22px}
+@media (max-width:760px){.bd{grid-template-columns:1fr}}
+.tabs{display:flex;flex-direction:column;gap:4px}
+@media (max-width:760px){.tabs{flex-direction:row;flex-wrap:wrap}}
+.tabs button{text-align:left;background:none;border:1px solid transparent;color:var(--ink);font:600 1rem var(--display);text-transform:uppercase;letter-spacing:.04em;padding:9px 12px;border-radius:4px;cursor:pointer}
+.tabs button:hover{border-color:var(--rule)}
+.tabs button[aria-selected="true"]{background:var(--acc);color:var(--on-acc)}
+.ln{display:flex;align-items:baseline;gap:10px;padding:11px 0;border-bottom:1px solid var(--rule)}
+.ln span{flex:0 1 auto;min-width:0}
+.ln i{flex:1;border-bottom:1px dotted var(--muted);opacity:.5;min-width:12px}
+.ln b{flex:none;font:700 1rem var(--mono)}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><svg class="m" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="17" fill="none" stroke="#C8963E" stroke-width="2"/><circle cx="18" cy="18" r="12.5" fill="#C8963E"/><text x="18" y="23.5" text-anchor="middle" font-family="Oswald,sans-serif" font-weight="700" font-size="15" fill="#1C2B4A">H</text></svg><span><b>HUDSON</b><small>автосервис · ул. Болдина, 98А</small></span></a>
+    <nav aria-label="Разделы"><a href="#services">Услуги</a><a href="#people">Мастера</a><a href="#reviews">Отзывы</a><a href="#contact">Запись</a></nav>
+    <a class="tel num" href="tel:+79290710606">+7 929 071-06-06</a>
+    <a class="btn" href="#contact">Записаться</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="k">Тула · ул. Болдина, 98А · рейтинг 5,0</p>
+        <h1>Цена видна <em>до того, как вы приехали.</em></h1>
+        <p class="lede">Подвеска, двигатель, ТО, тормоза, рулевое, электрика, кондиционеры и 3D развал‑схождение. Полный прайс ниже. Отчёт с фото присылаем в WhatsApp или Telegram, лишнего не навязываем.</p>
+        <div class="cta"><a class="btn" href="#contact">Записаться в WhatsApp</a><a class="btn out num" href="tel:+79290710606">+7 929 071-06-06</a></div>
+        <div class="chips"><span>Гарантия</span><span>Дизель и гибриды</span><span>Коммерческий транспорт</span><span>Можно с собакой</span></div>
+      </div>
+      <aside class="sign"><div class="sg-top"><span>Hudson</span><span>est. Тула</span></div>
+  <div class="sg-r"><b class="num">5,0</b><span>169 оценок<br>135 отзывов</span></div>
+  <div class="sg-l"><span>Замена масла ДВС</span><b class="num">1 199 ₽</b></div>
+  <div class="sg-l"><span>Тормозные колодки</span><b class="num">1 499 ₽</b></div>
+  <div class="sg-l"><span>3D развал‑схождение</span><b class="num">2 000 ₽</b></div>
+  <div class="sg-l"><span>Компьютерная диагностика</span><b class="num">500 ₽</b></div>
+  <a class="sg-more" href="#prices">Весь прайс, 66 позиций ↓</a></aside>
+    </div>
+  </section>
+  <section class="board" id="prices"><div class="wrap"><div class="sh"><h2>Прайс целиком</h2><p>66 позиций с карточки сервиса. Цена за работу, запчасти отдельно: можно свои, можно заказать через нас.</p></div>
+  <div class="bd"><div class="tabs" role="tablist"><button type="button" role="tab" aria-selected="true" data-i="0">Подвеска</button><button type="button" role="tab" aria-selected="false" data-i="1">Двигатель</button><button type="button" role="tab" aria-selected="false" data-i="2">ТО</button><button type="button" role="tab" aria-selected="false" data-i="3">Тормоза</button><button type="button" role="tab" aria-selected="false" data-i="4">Рулевое</button><button type="button" role="tab" aria-selected="false" data-i="5">Электрика</button><button type="button" role="tab" aria-selected="false" data-i="6">Диагностика</button><button type="button" role="tab" aria-selected="false" data-i="7">Климат и выхлоп</button><button type="button" role="tab" aria-selected="false" data-i="8">Колёса</button></div><div class="panes num"><div class="pane" role="tabpanel"><div class="ln"><span>Замена сайлентблоков</span><i></i><b>350 ₽</b></div><div class="ln"><span>Замена амортизатора</span><i></i><b>1 199 ₽</b></div><div class="ln"><span>Замена стоек стабилизатора</span><i></i><b>600 ₽</b></div><div class="ln"><span>Замена рычагов подвески</span><i></i><b>1 500 ₽</b></div><div class="ln"><span>Замена шаровой опоры</span><i></i><b>999 ₽</b></div><div class="ln"><span>Замена пружин подвески</span><i></i><b>999 ₽</b></div><div class="ln"><span>Замена опорного подшипника</span><i></i><b>1 999 ₽</b></div><div class="ln"><span>Замена подшипника полуоси</span><i></i><b>1 999 ₽</b></div><div class="ln"><span>Замена стабилизатора</span><i></i><b>999 ₽</b></div><div class="ln"><span>Замена ступицы</span><i></i><b>1 499 ₽</b></div><div class="ln"><span>Сайлентблоки подрамника</span><i></i><b>2 499 ₽</b></div></div><div class="pane" role="tabpanel" hidden><div class="ln"><span>Замена ГРМ</span><i></i><b>5 999 ₽</b></div><div class="ln"><span>Замена свечей зажигания</span><i></i><b>999 ₽</b></div><div class="ln"><span>Замена приводного ремня</span><i></i><b>999 ₽</b></div><div class="ln"><span>Замена форсунок</span><i></i><b>699 ₽</b></div><div class="ln"><span>Прокладка клапанной крышки</span><i></i><b>1 999 ₽</b></div><div class="ln"><span>Сальник коленвала</span><i></i><b>999 ₽</b></div><div class="ln"><span>Подушки двигателя</span><i></i><b>1 999 ₽</b></div><div class="ln"><span>Прокладка впускного коллектора</span><i></i><b>1 499 ₽</b></div><div class="ln"><span>Прокладка выпускного коллектора</span><i></i><b>1 499 ₽</b></div><div class="ln"><span>Замена ДВС любой сложности</span><i></i><b>24 999 ₽</b></div></div><div class="pane" role="tabpanel" hidden><div class="ln"><span>Замена масла ДВС</span><i></i><b>1 199 ₽</b></div><div class="ln"><span>Замена масла в коробке</span><i></i><b>1 199 ₽</b></div><div class="ln"><span>Замена масла АКПП</span><i></i><b>1 499 ₽</b></div><div class="ln"><span>Аппаратная замена тормозной жидкости</span><i></i><b>1 499 ₽</b></div><div class="ln"><span>Замена охлаждающей жидкости</span><i></i><b>1 499 ₽</b></div><div class="ln"><span>Замена жидкости ГУР</span><i></i><b>999 ₽</b></div><div class="ln"><span>Масло в редукторе</span><i></i><b>599 ₽</b></div><div class="ln"><span>Топливный фильтр</span><i></i><b>799 ₽</b></div><div class="ln"><span>Салонный фильтр</span><i></i><b>299 ₽</b></div><div class="ln"><span>Воздушный фильтр</span><i></i><b>199 ₽</b></div></div><div class="pane" role="tabpanel" hidden><div class="ln"><span>Диагностика тормозной системы</span><i></i><b>499 ₽</b></div><div class="ln"><span>Замена тормозных колодок</span><i></i><b>1 499 ₽</b></div><div class="ln"><span>Замена тормозных дисков</span><i></i><b>2 000 ₽</b></div><div class="ln"><span>Замена тормозных барабанов</span><i></i><b>1 999 ₽</b></div><div class="ln"><span>Трос ручного тормоза</span><i></i><b>999 ₽</b></div><div class="ln"><span>Тормозной шланг</span><i></i><b>999 ₽</b></div><div class="ln"><span>Тормозные магистрали</span><i></i><b>от 800 ₽</b></div><div class="ln"><span>Датчик АБС</span><i></i><b>799 ₽</b></div></div><div class="pane" role="tabpanel" hidden><div class="ln"><span>Замена ШРУСа</span><i></i><b>899 ₽</b></div><div class="ln"><span>Рулевой наконечник</span><i></i><b>699 ₽</b></div><div class="ln"><span>Рулевая тяга</span><i></i><b>599 ₽</b></div><div class="ln"><span>Рулевая рейка</span><i></i><b>2 499 ₽</b></div><div class="ln"><span>Рулевой редуктор</span><i></i><b>2 499 ₽</b></div></div><div class="pane" role="tabpanel" hidden><div class="ln"><span>Замена генератора</span><i></i><b>799 ₽</b></div><div class="ln"><span>Замена стартера</span><i></i><b>899 ₽</b></div><div class="ln"><span>Замена бензонасоса</span><i></i><b>1 199 ₽</b></div><div class="ln"><span>Катушка зажигания</span><i></i><b>299 ₽</b></div><div class="ln"><span>Замена датчиков</span><i></i><b>299 ₽</b></div><div class="ln"><span>Датчик парктроника</span><i></i><b>499 ₽</b></div><div class="ln"><span>Замена ламп</span><i></i><b>199 ₽</b></div></div><div class="pane" role="tabpanel" hidden><div class="ln"><span>Компьютерная диагностика</span><i></i><b>500 ₽</b></div><div class="ln"><span>Диагностика рулевого управления</span><i></i><b>500 ₽</b></div><div class="ln"><span>Диагностика подвески</span><i></i><b>699 ₽</b></div><div class="ln"><span>Комплексная диагностика</span><i></i><b>999 ₽</b></div></div><div class="pane" role="tabpanel" hidden><div class="ln"><span>Заправка кондиционера</span><i></i><b>1 499 ₽</b></div><div class="ln"><span>Поиск утечки фреона</span><i></i><b>999 ₽</b></div><div class="ln"><span>Радиатор кондиционера</span><i></i><b>1 999 ₽</b></div><div class="ln"><span>Замена радиатора</span><i></i><b>1 499 ₽</b></div><div class="ln"><span>Водяной насос</span><i></i><b>1 299 ₽</b></div><div class="ln"><span>Термостат</span><i></i><b>1 499 ₽</b></div><div class="ln"><span>Ремонт глушителя</span><i></i><b>999 ₽</b></div><div class="ln"><span>Замена глушителя</span><i></i><b>799 ₽</b></div><div class="ln"><span>Гофра глушителя</span><i></i><b>1 999 ₽</b></div></div><div class="pane" role="tabpanel" hidden><div class="ln"><span>3D развал‑схождение</span><i></i><b>2 000 ₽</b></div><div class="ln"><span>Шиномонтаж</span><i></i><b>от 500 ₽</b></div></div></div></div></div></section>
+<script>(function(){var b=document.querySelectorAll(".tabs button"),p=document.querySelectorAll(".pane");b.forEach(function(x){x.addEventListener("click",function(){b.forEach(function(y,j){y.setAttribute("aria-selected",y===x);p[j].hidden=y!==x;});});});})();</script>
+  <section id="services">
+    <div class="wrap">
+      <div class="sh"><h2>Что делаем</h2><p>Легковые и коммерческие, бензин, дизель и гибриды. Китайские, корейские, японские, европейские и отечественные автомобили.</p></div>
+      <div class="groups"><div><h3>Подвеска и рулевое</h3><ul><li>Сайлентблоки, рычаги, шаровые</li><li>Амортизаторы и пружины</li><li>Рулевые рейки и тяги</li><li>ШРУСы и ступицы</li></ul></div><div><h3>Двигатель</h3><ul><li>Замена ГРМ и ремней</li><li>Прокладки и сальники</li><li>Форсунки и топливная система</li><li>Замена ДВС под ключ</li></ul></div><div><h3>ТО</h3><ul><li>Масло в двигателе, КПП, АКПП</li><li>Аппаратная замена тормозной жидкости</li><li>Антифриз, ГУР, фильтры</li></ul></div><div><h3>Тормоза</h3><ul><li>Колодки, диски, барабаны</li><li>Шланги и магистрали</li><li>Датчики АБС, ручник</li></ul></div><div><h3>Электрика и климат</h3><ul><li>Генератор, стартер, бензонасос</li><li>Заправка кондиционера</li><li>Поиск утечки фреона</li></ul></div><div><h3>Колёса</h3><ul><li>3D развал‑схождение</li><li>Шиномонтаж и балансировка</li><li>Утилизация шин</li></ul></div></div>
+      <div class="price"><div><h3>Цены</h3><p class="pnote">Цены из карточки сервиса на Яндекс Картах. Остальное называем после осмотра, до начала работ.</p></div><div class="pl num"><div class="pi"><span>Норма‑час</span><i></i><b>1 000–1 500 ₽</b></div><div class="pi"><span>Шиномонтаж на 4 колеса</span><i></i><b>1 300–3 000 ₽</b></div><div class="pi"><span>Комплексная диагностика</span><i></i><b>999 ₽</b></div></div></div>
+    </div>
+  </section>
+  <section id="people" class="band">
+    <div class="wrap">
+      <div class="sh"><h2>Мастера</h2><p>Клиенты в отзывах называют мастеров по именам.</p></div>
+      <div class="ppl"><div><b>Дмитрий</b><span>мастер</span><p>«Супер мастер Дмитрий, машину сделал как для себя».</p></div><div><b>Никита</b><span>мастер</span><p>Клиенты называют его в отзывах по имени.</p></div><div><b>Отчёт</b><span>после ремонта</span><p>Фото и список работ в WhatsApp или Telegram, чай и кофе в зоне ожидания.</p></div></div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="wrap">
+      <div class="sh"><h2>Отзывы</h2><div class="score"><b class="num">5,0</b><span>169 оценок · 135 отзывов<br>Яндекс Карты</span></div></div>
+      <div class="rv"><figure><blockquote>«Обслуживаю у ребят машину не первый год»</blockquote><figcaption>Андрей С. · Яндекс Карты</figcaption></figure><figure><blockquote>«Сервис отличный! Индивидуальный подход к проблеме»</blockquote><figcaption>Дмитрий Дмитриев · декабрь 2025</figcaption></figure><figure><blockquote>«Супер мастер Дмитрий, машину сделал как для себя»</blockquote><figcaption>Наталья Леонова · октябрь 2024</figcaption></figure></div>
+      <p style="margin-top:22px"><a class="k" href="https://yandex.ru/maps/org/hudson/176305200015/reviews/" target="_blank" rel="noopener">Все отзывы на Яндекс Картах ↗</a></p>
+    </div>
+  </section>
+  <section id="contact" class="contact" style="padding-top:0">
+    <div class="wrap">
+      <form id="form" novalidate>
+        <p class="k">Запись</p>
+        <h2>Записаться в WhatsApp</h2>
+        <p>Заполните форму, и откроется WhatsApp с готовым сообщением мастеру.</p>
+        <div class="two">
+          <div class="f"><label for="n">Имя</label><input id="n" autocomplete="name" placeholder="Как к вам обращаться"></div>
+          <div class="f"><label for="c">Автомобиль</label><input id="c" placeholder="Например, Haval Jolion 2023"></div>
+        </div>
+        <fieldset class="f"><legend>Что нужно</legend><div class="pick"><input type="radio" name="w" id="x0" value="подвеска" checked><label for="x0">Подвеска</label><input type="radio" name="w" id="x1" value="ТО"><label for="x1">ТО</label><input type="radio" name="w" id="x2" value="тормоза"><label for="x2">Тормоза</label><input type="radio" name="w" id="x3" value="двигатель"><label for="x3">Двигатель</label><input type="radio" name="w" id="x4" value="развал‑схождение"><label for="x4">Развал 3D</label><input type="radio" name="w" id="x5" value="кондиционер"><label for="x5">Кондиционер</label></div></fieldset>
+        <div class="f"><label for="t">Что случилось</label><textarea id="t" placeholder="Коротко опишите проблему"></textarea></div>
+        <div class="cta"><a class="btn" id="wa" data-n="79290710606" href="https://wa.me/79290710606" target="_blank" rel="noopener">Открыть WhatsApp</a><a class="btn out" href="https://t.me/+79290710606" target="_blank" rel="noopener">Telegram</a></div>
+      </form>
+      <div>
+        <p class="k">Контакты</p>
+        <h2 style="font-size:clamp(1.7rem,3.2vw,2.3rem);margin:10px 0 22px">ул. Болдина, 98А</h2>
+        <div class="facts num">
+          <div><span>Телефон</span><span><span id="tel">+7 929 071-06-06</span><button class="copy" type="button" id="copy">копировать</button></span></div>
+          <div><span>Адрес</span><span>Тула, ул. Болдина, 98А</span></div><div><span>Режим</span><span>до 19:00, по записи</span></div><div><span>Запись</span><span>лучше заранее, в сезон очередь до 2 недель</span></div><div><span>Оплата</span><span>карта, наличные, СБП, безнал</span></div><div><span>Соцсети</span><span><a href="https://vk.ru/autoservicehudson" target="_blank" rel="noopener">ВКонтакте ↗</a></span></div>
+          <div><span>Маршрут</span><span><a href="https://yandex.ru/maps/org/hudson/176305200015/" target="_blank" rel="noopener">Яндекс Карты ↗</a></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap"><span>© HUDSON, Тула</span><span>Демо‑версия сайта</span></div></footer>
+<script>
+(function(){
+  var form=document.getElementById("form"),wa=document.getElementById("wa");
+  function upd(){
+    var w=(form.querySelector("input[name=w]:checked")||{}).value||"ремонт";
+    var car=document.getElementById("c").value.trim(),t=document.getElementById("t").value.trim(),n=document.getElementById("n").value.trim();
+    wa.href="https://wa.me/"+wa.dataset.n+"?text="+encodeURIComponent("Здравствуйте! Хочу записаться: "+w+"."+(car?"\nАвтомобиль: "+car+".":"")+(t?"\n"+t:"")+(n?"\n"+n:""));
+  }
+  form.addEventListener("input",upd);form.addEventListener("change",upd);form.addEventListener("submit",function(e){e.preventDefault();});upd();
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,el=document.getElementById("tel");
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(el.textContent).then(function(){b.textContent="скопировано";setTimeout(function(){b.textContent="копировать";},1600);},sel);}catch(_){sel();}
+  });
+})();
+</script>
+</body>
+</html>
